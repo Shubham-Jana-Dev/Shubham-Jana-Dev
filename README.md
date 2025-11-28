@@ -40,11 +40,5 @@
 
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shubhamjana32&show_icons=true&theme=default&hide_border=true" alt="Shubhamjana32 GitHub Stats" />
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhamjana32&layout=compact&theme=default&hide_border=true" alt="Shubhamjana32 Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shubhamjana32&theme=default&hide_border=true" alt="Shubhamjana32 Streak" />
+  <img src="https://user-images.githubusercontent.com/74038190/212379774-4b5c7379-9941-4712-a1f9-8472f10b80e8.gif" alt="Animated typing text: I build modern web applications" width="600"/>
 </p>
