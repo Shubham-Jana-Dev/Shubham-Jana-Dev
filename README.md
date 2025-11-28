@@ -38,11 +38,13 @@
 ### **📊 GitHub Stats**
 
 
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shubhamjana32&show_icons=true&theme=vue&hide_border=true&locale=en" alt="Shubhamjana32 GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhamjana32&layout=compact&theme=vue&hide_border=true&locale=en" alt="Shubhamjana32 Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Shubhamjana32&show_icons=true&theme=default&hide_border=true" alt="Shubhamjana32 GitHub Stats" />
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhamjana32&layout=compact&theme=default&hide_border=true" alt="Shubhamjana32 Top Languages" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shubhamjana32&theme=vue&hide_border=true&locale=en" alt="Shubhamjana32 Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shubhamjana32&theme=default&hide_border=true" alt="Shubhamjana32 Streak" />
 </p>
