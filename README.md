@@ -8,10 +8,12 @@
 
 ### **📊 Activity & Impact**
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="Shubham's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubham-Jana-Dev&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubham-Jana-Dev&theme=github-compact&hide_border=true&area=true" alt="Shubham's Activity Graph" />
 </p>
 
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shubham-Jana-Dev&theme=radical&hide_border=true" alt="GitHub Streak" />
+</p>
 ---
 
 ### **👨‍💻 About Me**
