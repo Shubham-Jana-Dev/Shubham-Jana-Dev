@@ -6,9 +6,9 @@
 
 ---
 
-### **📊 My GitHub Stats**
+### **📊 Activity & Impact**
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="Shubham's Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="Shubham's GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubham-Jana-Dev&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
 </p>
 
@@ -16,41 +16,43 @@
 
 ### **👨‍💻 About Me**
 
-* **Current Focus:** 🚀 Scaling **Local-First** web applications. I believe in a world where users own their data.
-* **Core Philosophy:** **Zero-Server Architecture**. I specialize in building complex, data-heavy SPAs that run entirely in the browser using **IndexedDB** for persistence.
-* **AI & Embedded:** Developer of **ISHU**, a custom-built AI assistant for Raspberry Pi featuring local LLM integration (Ollama), Whisper STT, and smart routine management.
-* **Expertise:** JavaScript (React), Python (AI/Automation), Tailwind CSS, and optimized Client-Side Storage.
+* **Philosophy:** 🚀 Focused on **Local-First** software. I believe in empowering users by keeping their data on their own devices.
+* **Architecture:** Expert in **Zero-Server** design. I build complex SPAs that utilize **IndexedDB** for high-performance, client-side persistence.
+* **AI Research:** Developing **ISHU**, a privacy-focused AI companion for the Raspberry Pi using local LLMs (Ollama) and offline Whisper STT.
+* **Workflow:** A high-velocity developer with a focus on consistent shipping and clean, modular code.
 
 ---
 
-### **🛠️ Tech Stack**
+### **🛠️ Technologies I Use**
 
 | Category | Tools |
 | :--- | :--- |
-| **Frontend** | React, JavaScript (ES6+), Tailwind CSS, HTML5 |
-| **Backend & AI** | Python, Ollama (Local LLMs), OpenAI Whisper, FastAPI |
-| **Storage & Tools** | IndexedDB, Git, Docker, Linux/Raspberry Pi |
+| **Web Development** | React, JavaScript (ES6+), Tailwind CSS, HTML5 |
+| **AI & Automation** | Python, Ollama, OpenAI Whisper, FastAPI |
+| **Systems** | Linux, Raspberry Pi, Docker, Git |
 
 ---
 
-### **🌟 Featured Projects**
+### **🌟 Key Projects**
 
 * **[ISHU AI Assistant](https://github.com/Shubham-Jana-Dev/Intelligent-Scheduling-Handheld-Utility-ISHU-)** 🤖  
-    A local AI companion for Raspberry Pi. It manages schedules, tells stories, and provides emotional support—all without sending your voice data to the cloud.
+  A portable AI companion with offline voice control and midnight-aware routine scheduling.
 * **[Privacy-First Finance Dashboard](https://github.com/Shubham-Jana-Dev/Finance-Dashboard)** 💰  
-    A complex financial visualization tool where 100% of the data stays on your machine. No backend, no leaks, total privacy.
+  Advanced data visualization for personal finance, where data privacy is guaranteed through local storage.
+* **[Universal Billing Platform](https://github.com/Shubham-Jana-Dev/Universal-billing-platform)** 🧾  
+  A serverless, vanilla JS billing platform designed for speed and reliability.
 
 ---
 
 ### **✨ Fun Fact**
 
-> I once pushed **228 commits in a single month** while building a serverless ecosystem. I don't just write code; I live in the terminal!
+> I'm a firm believer that the best backend is often no backend at all. If it can be done in the browser, I'll find a way to make it fast, secure, and persistent!
 
 ---
 
 ### **🌐 Let's Connect**
 
 <p align="left">
-<a href="https://www.linkedin.com/in/shubham-jana-3b650628a/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shubham-jana" height="30" width="40" /></a>
-<a href="mailto:devshubhamjana@gmail.com" target="blank"><img align="center" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" height="25" /></a>
+<a href="https://www.linkedin.com/in/shubham-jana-3b650628a/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shubham-jana" height="30" width="40" /></a>
+<a href="mailto:devshubhamjana@gmail.com" target="_blank"><img align="center" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" height="25" /></a>
 </p>
