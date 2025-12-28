@@ -31,9 +31,7 @@
 ### **🛠️ Technologies I Use**
 
 <p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,js,tailwind,html,css,python,fastapi,docker,linux,git,raspberrypi,vscode&theme=dark" />
-  </a>
+  <img src="https://skillicons.dev/icons?i=react,js,tailwind,html,css,python,fastapi,docker,linux,git,raspberrypi,vscode&theme=dark" />
 </p>
 
 ---
