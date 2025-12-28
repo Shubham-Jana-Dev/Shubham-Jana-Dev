@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&cache_seconds=1800" alt="GitHub Stats" height="180" />
-  <img src="https://raw.githubusercontent.com/Shubham-Jana-Dev/Shubham-Jana-Dev/output/github-contribution-grid-snake.svg" alt="Snake animation" height="180" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&cache_seconds=1800&v=1" alt="GitHub Stats" height="180" />
+  <img src="https://raw.githubusercontent.com/Shubham-Jana-Dev/Shubham-Jana-Dev/output/github-contribution-grid-snake.svg?v=1" alt="Snake animation" height="180" />
 </p>
 
 ---
