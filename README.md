@@ -7,13 +7,16 @@
 ---
 
 ### **📊 Activity & Impact**
+
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubham-Jana-Dev&theme=github-compact&hide_border=true&area=true" alt="Shubham's Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubham-Jana-Dev&theme=github-compact&hide_border=true&area=true" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" height="180" />
+  <img src="https://raw.githubusercontent.com/Shubham-Jana-Dev/Shubham-Jana-Dev/output/github-contribution-grid-snake.svg" alt="Snake animation" height="180" />
 </p>
+
 ---
 
 ### **👨‍💻 About Me**
@@ -27,11 +30,11 @@
 
 ### **🛠️ Technologies I Use**
 
-| Category | Tools |
-| :--- | :--- |
-| **Web Development** | React, JavaScript (ES6+), Tailwind CSS, HTML5 |
-| **AI & Automation** | Python, Ollama, OpenAI Whisper, FastAPI |
-| **Systems** | Linux, Raspberry Pi, Docker, Git |
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,js,tailwind,html,css,python,fastapi,docker,linux,git,raspberrypi,vscode&theme=dark" />
+  </a>
+</p>
 
 ---
 
