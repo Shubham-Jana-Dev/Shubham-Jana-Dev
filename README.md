@@ -23,8 +23,8 @@
 
 * **Philosophy:** 🚀 Focused on **Local-First** software. I believe in empowering users by keeping their data on their own devices.
 * **Architecture:** Expert in **Zero-Server** design. I build complex SPAs that utilize **IndexedDB** for high-performance, client-side persistence.
+* **Real-World Impact:** Currently digitizing **KJ Enterprise**, a multi-domain business ecosystem (EV, Energy, Retail) through lightweight, performant frontend architecture.
 * **AI Research:** Developing **ISHU**, a privacy-focused AI companion for the Raspberry Pi using local LLMs (Ollama) and offline Whisper STT.
-* **Workflow:** A high-velocity developer with a focus on consistent shipping and clean, modular code.
 
 ---
 
@@ -38,12 +38,12 @@
 
 ### **🌟 Key Projects**
 
+* **[KJ Enterprise Portal](https://github.com/Shubham-Jana-Dev/KJ-Enterprise)** 🌐
+  A high-performance business hub for local services (EV Showroom, Gas Seva, Education), built with semantic HTML5 and advanced CSS3 animations.
 * **[ISHU AI Assistant](https://github.com/Shubham-Jana-Dev/Intelligent-Scheduling-Handheld-Utility-ISHU-)** 🤖  
   A portable AI companion with offline voice control and midnight-aware routine scheduling.
-* **[Privacy-First Finance Dashboard](https://github.com/Shubham-Jana-Dev/Finance-Dashboard)** 💰  
-  Advanced data visualization for personal finance, where data privacy is guaranteed through local storage.
 * **[Universal Billing Platform](https://github.com/Shubham-Jana-Dev/Universal-billing-platform)** 🧾  
-  A serverless, vanilla JS billing platform designed for speed and reliability.
+  A serverless, vanilla JS billing platform designed for speed, reliability, and local data persistence.
 
 ---
 
