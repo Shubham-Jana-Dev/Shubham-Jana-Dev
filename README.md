@@ -9,7 +9,7 @@
 ### **📊 Activity & Impact**
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubham-Jana-Dev&theme=github-compact&hide_border=true&area=true" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubham-Jana-Dev&theme=github-compact&hide_border=true&area=true" width="70%" />
 </p>
 
 <p align="center">
