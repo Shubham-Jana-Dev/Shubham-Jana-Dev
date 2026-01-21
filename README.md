@@ -14,6 +14,12 @@
 
 <p align="center">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&cache_seconds=1800&v=1" alt="GitHub Stats" height="180" />
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Shubham-Jana-Dev&theme=tokyonight&hide_border=true" width="100%">
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubham-Jana-Dev&layout=compact&theme=tokyonight&hide_border=true" width="100%">
+</p>
   <img src="https://raw.githubusercontent.com/Shubham-Jana-Dev/Shubham-Jana-Dev/output/github-contribution-grid-snake.svg?v=1" alt="Snake animation" height="180" />
 </p>
 
