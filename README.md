@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&cache_seconds=1800&v=1" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&cache_seconds=1800&v=1" alt="GitHub Stats" width="70%" />
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=Shubham-Jana-Dev&theme=tokyonight&hide_border=true" width="70%">
 </p>
