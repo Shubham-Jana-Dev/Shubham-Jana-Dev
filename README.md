@@ -6,7 +6,7 @@
 
 ---
 <p align="center">
-### **📊 Activity & Impact**
+📊 Activity & Impact
 </p>
 
 <p align="center">
