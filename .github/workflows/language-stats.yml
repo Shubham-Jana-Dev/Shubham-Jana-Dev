@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 18
       - run: npm install
-      - name: Generate Dashboard SVG
+      - name: Generate Dashboard
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: ${{ github.actor }}
@@ -25,5 +25,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add profile-stats.svg
-          git commit -m "Update Streak Design" || exit 0
+          git commit -m "Update Streak, Percentages and Layout" || exit 0
           git push
