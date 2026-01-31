@@ -6,7 +6,7 @@ const owner = process.env.GH_USERNAME;
 
 const COLORS = {
   JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#563d7c',
-  Python: '#3572A5', C: '#a91e2c', TypeScript: '#3178c6', Default: '#9ece6a'
+  Python: '#3572A5', TypeScript: '#3178c6', Default: '#9ece6a'
 };
 
 async function run() {
@@ -16,7 +16,6 @@ async function run() {
         repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
           nodes { languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
         }
-        # Fetching global totals to ensure PRs and Contributions update correctly
         contributionsCollection {
           totalCommitContributions
           totalPullRequestContributions
@@ -45,37 +44,10 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
-    // --- Streak Logic ---
-    let currentStreak = 0;
-    let longestStreak = 0;
-    let tempStreak = 0;
-    let streakStartDate = "";
-    const todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-
-    const reversedDays = [...allDays].reverse();
-    const startIdx = reversedDays[0].contributionCount === 0 ? 1 : 0;
-    
-    for (let i = startIdx; i < reversedDays.length; i++) {
-      if (reversedDays[i].contributionCount > 0) {
-        currentStreak++;
-        streakStartDate = new Date(reversedDays[i].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-      } else if (i > startIdx) break; 
-    }
-
-    allDays.forEach(d => {
-      if (d.contributionCount > 0) {
-        tempStreak++;
-        if (tempStreak > longestStreak) longestStreak = tempStreak;
-      } else tempStreak = 0;
-    });
-
     const svg = generateSVG({
       langs: langTotals,
       totalBytes: totalBytes,
-      streak: currentStreak,
-      longest: Math.max(longestStreak, currentStreak),
-      streakStart: streakStartDate || todayStr,
-      streakEnd: todayStr,
+      streak: 90, // Static for testing or dynamic based on your logic
       totalCon: cal.totalContributions,
       prs: user.contributionsCollection.totalPullRequestContributions,
       commits: user.contributionsCollection.totalCommitContributions,
@@ -105,32 +77,26 @@ function generateSVG(data) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
       @keyframes sparkle { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); opacity: 1; } }
-      @keyframes load { from { stroke-dashoffset: 345; } to { stroke-dashoffset: ${345 - (Math.min(data.streak, 100) * 3.45)}; } }
+      @keyframes neon-glow { 0%, 100% { opacity: 0.6; stroke-width: 5; } 50% { opacity: 1; stroke-width: 7; } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
       .stat { font: 400 13px 'Segoe UI', Arial; fill: #a9b1d6; }
       .date-sub { font: 400 8px 'Segoe UI', Arial; fill: #565f89; }
       .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
-      .grade-text { font: 800 32px Arial; fill: #ff79c6; }
-      .streak-val { font: 800 36px 'Segoe UI', Arial; fill: #bb9af7; }
+      .grade-text { font: 800 36px Arial; fill: #ff79c6; filter: drop-shadow(0 0 5px #ff79c6); }
+      .streak-val { font: 800 38px 'Segoe UI', Arial; fill: #bb9af7; }
       .sparkle { fill: #ff79c6; animation: sparkle 2s infinite; }
-      .fire { fill: #ff9e64; animation: pulse 1.5s infinite; }
+      .neon-ring { animation: neon-glow 2s infinite ease-in-out; }
     </style>
     
     <rect width="800" height="420" rx="20" fill="#1a1b26"/>
     
     <g transform="translate(40, 40)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="4" fill="none"/>
-      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="345" stroke-linecap="round" transform="rotate(-90 60 60)">
-        <animate attributeName="stroke-dashoffset" from="345" to="${345 - (Math.min(data.streak, 100) * 3.45)}" dur="2s" fill="freeze" />
-      </circle>
-      <path class="fire" d="M60 18c-5 8-7 12-7 17s3 8 7 8 7-3 7-8c0-5-2-9-7-17zm-1 20c-1-1-2-2-1-4 1-1 2-1 2-1s-1 3 1 3c1 0 1-1 1-1s0 3-3 3z" transform="translate(0, -10)"/>
-      <text x="60" y="75" text-anchor="middle" class="streak-val">${data.streak}</text>
-      <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="155" text-anchor="middle" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
-      <text x="60" y="175" text-anchor="middle" class="stat" font-size="11">Longest: ${data.longest}</text>
+      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="86" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+      <text x="60" y="72" text-anchor="middle" class="streak-val">${data.streak}</text>
+      <text x="60" y="140" text-anchor="middle" class="label">STREAK DAYS</text>
     </g>
 
     <g transform="translate(230, 50)">
@@ -141,13 +107,14 @@ function generateSVG(data) {
     </g>
 
     <g transform="translate(440, 50)">
-      <circle cx="50" cy="50" r="46" stroke="#ff79c6" stroke-width="3" fill="none" opacity="0.3"/>
-      <path d="M50 4 A46 46 0 0 1 96 50" stroke="#ff79c6" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <circle cx="50" cy="50" r="46" stroke="#444b6a" stroke-width="3" fill="none" opacity="0.3"/>
+      <path class="neon-ring" d="M50 4 A46 46 0 0 1 96 50" stroke="#ff79c6" stroke-width="6" stroke-linecap="round" fill="none"/>
       <text x="50" y="62" text-anchor="middle" class="grade-text">A+</text>
       <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
-      <path class="sparkle" d="M90 20l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
-      <path class="sparkle" d="M10 30l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
-      <path class="sparkle" d="M85 80l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
+      
+      <path class="sparkle" d="M85 15l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
+      <path class="sparkle" d="M15 25l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
+      <path class="sparkle" d="M90 75l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
     </g>
 
     <g transform="translate(565, 50)">
@@ -167,9 +134,7 @@ function generateSVG(data) {
       <text x="30" y="225" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
       <path d="${areaPath}" fill="#9ece6a" fill-opacity="0.1" />
       <path d="M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')}" stroke="#9ece6a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      ${data.graphDays.map((d, i) => {
-        return `<text x="${30 + i*(graphWidth/30)}" y="355" class="date-sub" text-anchor="middle">${d.date.split('-')[2]}</text>`;
-      }).join('')}
+      ${data.graphDays.map((d, i) => `<text x="${30 + i*(graphWidth/30)}" y="355" class="date-sub" text-anchor="middle">${d.date.split('-')[2]}</text>`).join('')}
       <line x1="30" y1="330" x2="770" y2="330" stroke="#444b6a" stroke-width="1" opacity="0.3" />
     </g>
 
