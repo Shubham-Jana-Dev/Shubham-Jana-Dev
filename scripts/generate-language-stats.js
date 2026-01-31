@@ -44,27 +44,30 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
-    // --- Dynamic Date & Streak Logic ---
-    const today = new Date();
-    const todayStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    const yearStart = new Date(today.getFullYear(), 0, 1).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    
-    // Using your current data from the screenshot (Nov 3 - Jan 31)
-    const streakStart = "Nov 3, 2025";
-    const streakEnd = "Jan 31, 2026";
+    // --- Dynamic Streak & Date Range Logic ---
+    let currentStreak = 0;
+    let streakStartDate = "";
+    const reversedDays = [...allDays].reverse();
+    const todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+    for (let i = (reversedDays[0].contributionCount === 0 ? 1 : 0); i < reversedDays.length; i++) {
+      if (reversedDays[i].contributionCount > 0) {
+        currentStreak++;
+        streakStartDate = new Date(reversedDays[i].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      } else break;
+    }
 
     const svg = generateSVG({
       langs: langTotals,
       totalBytes: totalBytes,
-      streak: 90, 
+      streak: currentStreak || 0,
       totalCon: cal.totalContributions,
       prs: user.contributionsCollection.totalPullRequestContributions,
       commits: user.contributionsCollection.totalCommitContributions,
       graphDays: last31Days,
       maxDay: maxDayCount,
-      streakStart,
-      streakEnd,
-      yearStart
+      streakStart: streakStartDate || "N/A",
+      streakEnd: todayStr
     });
 
     fs.writeFileSync('profile-stats.svg', svg);
@@ -90,7 +93,7 @@ function generateSVG(data) {
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
       @keyframes sparkle { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.4); opacity: 1; } }
-      @keyframes neon-glow { 0%, 100% { stroke-width: 7; filter: drop-shadow(0 0 2px #ff79c6); } 50% { stroke-width: 10; filter: drop-shadow(0 0 8px #ff79c6); } }
+      @keyframes neon-glow { 0%, 100% { stroke-width: 8; filter: drop-shadow(0 0 3px #ff79c6); } 50% { stroke-width: 11; filter: drop-shadow(0 0 10px #ff79c6); } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
       .stat { font: 400 13px 'Segoe UI', Arial; fill: #a9b1d6; }
@@ -106,7 +109,7 @@ function generateSVG(data) {
     
     <g transform="translate(40, 40)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="4" fill="none"/>
-      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="150" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="140" stroke-linecap="round" transform="rotate(-90 60 60)"/>
       <text x="60" y="75" text-anchor="middle" class="streak-val">${data.streak}</text>
       <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
       <text x="60" y="158" text-anchor="middle" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
@@ -117,19 +120,19 @@ function generateSVG(data) {
       <text x="0" y="35" class="stat">Total Contributions: ${data.totalCon}</text>
       <text x="0" y="60" class="stat">Pull Requests: ${data.prs}</text>
       <text x="0" y="85" class="stat">Total Commits: ${data.commits}</text>
-      <text x="0" y="110" class="stat">Longest Streak: ${data.streak} Days</text>
-      <text x="0" y="125" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
+      <text x="0" y="115" class="label" style="fill:#bb9af7">Active Range:</text>
+      <text x="0" y="130" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
     </g>
 
     <g transform="translate(440, 50)">
       <circle cx="50" cy="50" r="46" stroke="#444b6a" stroke-width="4" fill="none" opacity="0.3"/>
-      <path class="neon-ring" d="M50 4 A46 46 0 0 1 96 50" stroke="#ff79c6" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path class="neon-ring" d="M50 4 A46 46 0 0 1 50 96" stroke="#ff79c6" stroke-width="9" stroke-linecap="round" fill="none"/>
       <text x="50" y="64" text-anchor="middle" class="grade-text">A+</text>
       <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
       
-      <path class="sparkle" d="M90 15l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
-      <path class="sparkle" d="M10 30l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
-      <path class="sparkle" d="M85 85l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
+      <path class="sparkle" d="M92 20l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
+      <path class="sparkle" d="M8 50l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
+      <path class="sparkle" d="M92 80l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
     </g>
 
     <g transform="translate(565, 50)">
