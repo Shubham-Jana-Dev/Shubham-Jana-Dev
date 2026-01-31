@@ -44,7 +44,6 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
-    // --- Current & Longest Streak Logic ---
     let currentStreak = 0;
     let longestStreak = 0;
     let tempStreak = 0;
@@ -52,7 +51,6 @@ async function run() {
     const todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
     const reversedDays = [...allDays].reverse();
-    // Start check from today if there are commits, else start from yesterday
     const startIdx = reversedDays[0].contributionCount === 0 ? 1 : 0;
     
     for (let i = startIdx; i < reversedDays.length; i++) {
@@ -77,8 +75,8 @@ async function run() {
       streakStart: streakStartDate || todayStr,
       streakEnd: todayStr,
       totalCon: cal.totalContributions,
-      prs: user.contributionsCollection.totalPullRequestContributions,
-      commits: user.contributionsCollection.totalCommitContributions,
+      prs: user.totalPullRequestContributions || 0,
+      commits: user.totalCommitContributions || 0,
       graphDays: last31Days,
       maxDay: maxDayCount
     });
@@ -92,7 +90,7 @@ async function run() {
 
 function generateSVG(data) {
   const topLangs = Object.entries(data.langs).sort((a,b) => b[1]-a[1]).slice(0, 5);
-  const grade = data.totalCon > 1000 ? "S++" : data.totalCon > 500 ? "A+" : "A";
+  const grade = "A+"; // Force high contrast for A+
   
   const graphWidth = 740;
   const graphHeight = 80;
@@ -107,24 +105,27 @@ function generateSVG(data) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
-      @keyframes slide { from { stroke-dashoffset: 345; } to { stroke-dashoffset: ${345 - (Math.min(data.streak, 100) * 3.45)}; } }
+      @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
+      @keyframes dash { from { stroke-dashoffset: 345; } to { stroke-dashoffset: ${345 - (Math.min(data.streak, 100) * 3.45)}; } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
       .stat { font: 400 13px 'Segoe UI', Arial; fill: #a9b1d6; }
-      .date-sub { font: 400 10px 'Segoe UI', Arial; fill: #565f89; }
+      .date-sub { font: 400 9px 'Segoe UI', Arial; fill: #565f89; }
       .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
       .grade-text { font: 800 32px Arial; fill: #ff79c6; animation: pulse 2s infinite; }
       .streak-val { font: 800 36px 'Segoe UI', Arial; fill: #bb9af7; }
-      .ring { animation: slide 1.5s ease-out forwards; }
-      .fire { animation: pulse 1.5s infinite; }
+      .fire-icon { fill: #ff9e64; animation: pulse 1.5s infinite; }
+      .ring-animate { animation: dash 2s ease-out forwards; }
     </style>
+    
     <rect width="800" height="420" rx="20" fill="#1a1b26"/>
     
     <g transform="translate(40, 40)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="4" fill="none"/>
-      <circle class="ring" cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="4" fill="none" stroke-dasharray="345" stroke-dashoffset="345" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-      <path class="fire" d="M60 15c-4 7-8 10-8 15 0 4 3 7 8 7s8-3 8-7c0-5-4-8-8-15z" fill="#7aa2f7" transform="translate(0, -5)"/>
+      <circle class="ring-animate" cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="345" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+      
+      <path class="fire-icon" d="M60 12c0 0-8 10-8 18s4 12 8 12 8-4 8-12-8-18-8-18zm-2 22c-1.5-1-2-3-1-5 1-2 3-2 3-2s-1 4 1 5c1 1 2 0 2 0s-1 4-5 2z" transform="translate(0, -8)"/>
+      
       <text x="60" y="75" text-anchor="middle" class="streak-val">${data.streak}</text>
       <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
       <text x="60" y="155" text-anchor="middle" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
@@ -139,7 +140,8 @@ function generateSVG(data) {
     </g>
 
     <g transform="translate(440, 50)">
-      <circle cx="50" cy="50" r="45" stroke="#ff79c6" stroke-width="2" fill="none" opacity="0.2"/>
+      <circle cx="50" cy="50" r="46" stroke="#444b6a" stroke-width="2" fill="none"/>
+      <circle cx="50" cy="50" r="46" stroke="#ff79c6" stroke-width="5" fill="none" stroke-dasharray="290" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 50 50)"/>
       <text x="50" y="62" text-anchor="middle" class="grade-text">${grade}</text>
       <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
     </g>
@@ -160,9 +162,12 @@ function generateSVG(data) {
     <g transform="translate(0, 0)">
       <text x="30" y="225" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
       <path d="${areaPath}" fill="#9ece6a" fill-opacity="0.1" />
-      <path d="M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')}" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      ${data.graphDays.map((d, i) => i % 5 === 0 ? `<text x="${30 + i*(graphWidth/30)}" y="355" class="date-sub" text-anchor="middle">${d.date.split('-')[2]}</text>` : '').join('')}
-      <line x1="30" y1="330" x2="770" y2="330" stroke="#444b6a" stroke-width="1" opacity="0.5" />
+      <path d="M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')}" stroke="#9ece6a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      ${data.graphDays.map((d, i) => {
+        // Show every 3rd day to prevent overlapping while showing more numbers
+        return i % 3 === 0 ? `<text x="${30 + i*(graphWidth/30)}" y="355" class="date-sub" text-anchor="middle">${d.date.split('-')[2]}</text>` : '';
+      }).join('')}
+      <line x1="30" y1="330" x2="770" y2="330" stroke="#444b6a" stroke-width="1" opacity="0.3" />
     </g>
 
     <text x="400" y="395" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="11" fill="#4fd6be" letter-spacing="1.5" opacity="0.8">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
