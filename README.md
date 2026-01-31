@@ -11,6 +11,9 @@
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubham-Jana-Dev&theme=github-compact&hide_border=true&area=true" width="100%" />
 </p>
+<p align="center">
+  <img src="./language-stats.svg" width="70%" alt="My Custom Language Stats" />
+</p>
 
 <p align="center">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Shubham-Jana-Dev&show_icons=true&theme=radical&hide_border=true&cache_seconds=1800&v=1" alt="GitHub Stats" width="70%" />
