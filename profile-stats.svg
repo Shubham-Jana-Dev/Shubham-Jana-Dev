@@ -1,72 +1,78 @@
 
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      .title { font: 700 20px 'Segoe UI', Arial; fill: #7aa2f7; }
-      .label { font: 600 14px 'Segoe UI', Arial; fill: #7aa2f7; }
-      .stat { font: 400 14px 'Segoe UI', Arial; fill: #a9b1d6; }
-      .percent { font: 600 12px 'Segoe UI', Arial; fill: #9ece6a; }
-      .grade-text { font: 800 32px Arial; fill: #ff79c6; }
+      @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+      .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
+      .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
+      .stat { font: 400 13px 'Segoe UI', Arial; fill: #a9b1d6; }
+      .date-sub { font: 400 10px 'Segoe UI', Arial; fill: #565f89; }
+      .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
+      .grade-text { font: 800 32px Arial; fill: #ff79c6; animation: pulse 2s infinite; }
       .streak-val { font: 800 36px 'Segoe UI', Arial; fill: #bb9af7; }
+      .fire { animation: pulse 1.5s infinite; }
     </style>
     <rect width="800" height="420" rx="20" fill="#1a1b26"/>
     
     <g transform="translate(40, 40)">
-      <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="6" fill="none"/>
-      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="37.94999999999999" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-      <text x="60" y="72" text-anchor="middle" class="streak-val">89</text>
-      <text x="60" y="145" text-anchor="middle" class="label">CURRENT STREAK</text>
+      <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="4" fill="none"/>
+      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="4" fill="none" stroke-dasharray="345" stroke-dashoffset="37.94999999999999" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+      <path class="fire" d="M60 15c-4 7-8 10-8 15 0 4 3 7 8 7s8-3 8-7c0-5-4-8-8-15z" fill="#7aa2f7" transform="translate(0, -5)"/>
+      <text x="60" y="75" text-anchor="middle" class="streak-val">89</text>
+      <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
+      <text x="60" y="155" text-anchor="middle" class="date-sub">Nov 4 - Jan 31</text>
+      <text x="60" y="175" text-anchor="middle" class="stat" font-size="11">Max: 89 Days</text>
     </g>
 
-    <g transform="translate(220, 50)">
+    <g transform="translate(230, 50)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="35" class="stat">Total Contributions: 664</text>
-      <text x="0" y="65" class="stat">Pull Requests: 2</text>
-      <text x="0" y="95" class="stat">Total Commits: 633</text>
+      <text x="0" y="35" class="stat">Total Contributions: 665</text>
+      <text x="0" y="60" class="stat">Pull Requests: 2</text>
+      <text x="0" y="85" class="stat">Total Commits: 634</text>
     </g>
 
-    <g transform="translate(430, 50)">
-      <circle cx="50" cy="50" r="45" stroke="#ff79c6" stroke-width="3" fill="none" opacity="0.2"/>
-      <circle cx="50" cy="50" r="45" stroke="#ff79c6" stroke-width="4" fill="none" stroke-dasharray="282" stroke-dashoffset="60" stroke-linecap="round"/>
+    <g transform="translate(440, 50)">
+      <circle cx="50" cy="50" r="45" stroke="#ff79c6" stroke-width="2" fill="none" opacity="0.2"/>
       <text x="50" y="62" text-anchor="middle" class="grade-text">A+</text>
-      <text x="50" y="125" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
+      <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
     </g>
 
-    <g transform="translate(560, 50)">
+    <g transform="translate(565, 50)">
       <text x="0" y="0" class="title">Language Stack</text>
       
-          <text x="0" y="35" class="stat">HTML</text>
-          <rect x="90" y="26" width="100" height="8" rx="4" fill="#444b6a"/>
-          <rect x="90" y="26" width="39.7" height="8" rx="4" fill="#e34c26"/>
-          <text x="200" y="35" class="percent">39.7%</text>
+          <text x="0" y="32" class="stat">HTML</text>
+          <rect x="85" y="23" width="90" height="7" rx="3.5" fill="#444b6a"/>
+          <rect x="85" y="23" width="35.730000000000004" height="7" rx="3.5" fill="#e34c26"/>
+          <text x="185" y="32" class="percent">39.7%</text>
         
-          <text x="0" y="57" class="stat">JavaScript</text>
-          <rect x="90" y="48" width="100" height="8" rx="4" fill="#444b6a"/>
-          <rect x="90" y="48" width="35.2" height="8" rx="4" fill="#f1e05a"/>
-          <text x="200" y="57" class="percent">35.2%</text>
+          <text x="0" y="54" class="stat">JavaScript</text>
+          <rect x="85" y="45" width="90" height="7" rx="3.5" fill="#444b6a"/>
+          <rect x="85" y="45" width="31.680000000000003" height="7" rx="3.5" fill="#f1e05a"/>
+          <text x="185" y="54" class="percent">35.2%</text>
         
-          <text x="0" y="79" class="stat">Python</text>
-          <rect x="90" y="70" width="100" height="8" rx="4" fill="#444b6a"/>
-          <rect x="90" y="70" width="17.3" height="8" rx="4" fill="#3572A5"/>
-          <text x="200" y="79" class="percent">17.3%</text>
+          <text x="0" y="76" class="stat">Python</text>
+          <rect x="85" y="67" width="90" height="7" rx="3.5" fill="#444b6a"/>
+          <rect x="85" y="67" width="15.570000000000002" height="7" rx="3.5" fill="#3572A5"/>
+          <text x="185" y="76" class="percent">17.3%</text>
         
-          <text x="0" y="101" class="stat">CSS</text>
-          <rect x="90" y="92" width="100" height="8" rx="4" fill="#444b6a"/>
-          <rect x="90" y="92" width="6.6000000000000005" height="8" rx="4" fill="#563d7c"/>
-          <text x="200" y="101" class="percent">6.6%</text>
+          <text x="0" y="98" class="stat">CSS</text>
+          <rect x="85" y="89" width="90" height="7" rx="3.5" fill="#444b6a"/>
+          <rect x="85" y="89" width="5.94" height="7" rx="3.5" fill="#563d7c"/>
+          <text x="185" y="98" class="percent">6.6%</text>
         
-          <text x="0" y="123" class="stat">C</text>
-          <rect x="90" y="114" width="100" height="8" rx="4" fill="#444b6a"/>
-          <rect x="90" y="114" width="1.3" height="8" rx="4" fill="#a91e2c"/>
-          <text x="200" y="123" class="percent">1.3%</text>
+          <text x="0" y="120" class="stat">C</text>
+          <rect x="85" y="111" width="90" height="7" rx="3.5" fill="#444b6a"/>
+          <rect x="85" y="111" width="1.08" height="7" rx="3.5" fill="#a91e2c"/>
+          <text x="185" y="120" class="percent">1.2%</text>
         
     </g>
 
     <g transform="translate(0, 0)">
-      <text x="30" y="220" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M30,313.6363636363636 L54.66666666666667,331.8181818181818 L79.33333333333334,327.27272727272725 L104,250 L128.66666666666669,327.27272727272725 L153.33333333333334,318.1818181818182 L178,322.72727272727275 L202.66666666666669,327.27272727272725 L227.33333333333334,331.8181818181818 L252,331.8181818181818 L276.6666666666667,336.3636363636364 L301.33333333333337,336.3636363636364 L326,336.3636363636364 L350.6666666666667,313.6363636363636 L375.33333333333337,327.27272727272725 L400,304.54545454545456 L424.6666666666667,313.6363636363636 L449.33333333333337,322.72727272727275 L474,318.1818181818182 L498.6666666666667,295.45454545454544 L523.3333333333334,272.72727272727275 L548,336.3636363636364 L572.6666666666667,304.54545454545456 L597.3333333333334,336.3636363636364 L622,331.8181818181818 L646.6666666666667,290.9090909090909 L671.3333333333334,322.72727272727275 L696,331.8181818181818 L720.6666666666667,313.6363636363636 L745.3333333333334,322.72727272727275 L770,268.1818181818182 L770,350 L30,350 Z" fill="#9ece6a" fill-opacity="0.1" />
-      <path d="M30,313.6363636363636 L54.66666666666667,331.8181818181818 L79.33333333333334,327.27272727272725 L104,250 L128.66666666666669,327.27272727272725 L153.33333333333334,318.1818181818182 L178,322.72727272727275 L202.66666666666669,327.27272727272725 L227.33333333333334,331.8181818181818 L252,331.8181818181818 L276.6666666666667,336.3636363636364 L301.33333333333337,336.3636363636364 L326,336.3636363636364 L350.6666666666667,313.6363636363636 L375.33333333333337,327.27272727272725 L400,304.54545454545456 L424.6666666666667,313.6363636363636 L449.33333333333337,322.72727272727275 L474,318.1818181818182 L498.6666666666667,295.45454545454544 L523.3333333333334,272.72727272727275 L548,336.3636363636364 L572.6666666666667,304.54545454545456 L597.3333333333334,336.3636363636364 L622,331.8181818181818 L646.6666666666667,290.9090909090909 L671.3333333333334,322.72727272727275 L696,331.8181818181818 L720.6666666666667,313.6363636363636 L745.3333333333334,322.72727272727275 L770,268.1818181818182" stroke="#9ece6a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <line x1="30" y1="350" x2="770" y2="350" stroke="#444b6a" stroke-width="1" />
+      <text x="30" y="225" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
+      <path d="M30,300.9090909090909 L54.66666666666667,315.45454545454544 L79.33333333333334,311.8181818181818 L104,250 L128.66666666666669,311.8181818181818 L153.33333333333334,304.54545454545456 L178,308.1818181818182 L202.66666666666669,311.8181818181818 L227.33333333333334,315.45454545454544 L252,315.45454545454544 L276.6666666666667,319.09090909090907 L301.33333333333337,319.09090909090907 L326,319.09090909090907 L350.6666666666667,300.9090909090909 L375.33333333333337,311.8181818181818 L400,293.6363636363636 L424.6666666666667,300.9090909090909 L449.33333333333337,308.1818181818182 L474,304.54545454545456 L498.6666666666667,286.3636363636364 L523.3333333333334,268.1818181818182 L548,319.09090909090907 L572.6666666666667,293.6363636363636 L597.3333333333334,319.09090909090907 L622,315.45454545454544 L646.6666666666667,282.72727272727275 L671.3333333333334,308.1818181818182 L696,315.45454545454544 L720.6666666666667,300.9090909090909 L745.3333333333334,308.1818181818182 L770,260.9090909090909 L770,330 L30,330 Z" fill="#9ece6a" fill-opacity="0.1" />
+      <path d="M30,300.9090909090909 L54.66666666666667,315.45454545454544 L79.33333333333334,311.8181818181818 L104,250 L128.66666666666669,311.8181818181818 L153.33333333333334,304.54545454545456 L178,308.1818181818182 L202.66666666666669,311.8181818181818 L227.33333333333334,315.45454545454544 L252,315.45454545454544 L276.6666666666667,319.09090909090907 L301.33333333333337,319.09090909090907 L326,319.09090909090907 L350.6666666666667,300.9090909090909 L375.33333333333337,311.8181818181818 L400,293.6363636363636 L424.6666666666667,300.9090909090909 L449.33333333333337,308.1818181818182 L474,304.54545454545456 L498.6666666666667,286.3636363636364 L523.3333333333334,268.1818181818182 L548,319.09090909090907 L572.6666666666667,293.6363636363636 L597.3333333333334,319.09090909090907 L622,315.45454545454544 L646.6666666666667,282.72727272727275 L671.3333333333334,308.1818181818182 L696,315.45454545454544 L720.6666666666667,300.9090909090909 L745.3333333333334,308.1818181818182 L770,260.9090909090909" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="30" y="355" class="date-sub" text-anchor="middle">01</text><text x="153.33333333333334" y="355" class="date-sub" text-anchor="middle">06</text><text x="276.6666666666667" y="355" class="date-sub" text-anchor="middle">11</text><text x="400" y="355" class="date-sub" text-anchor="middle">16</text><text x="523.3333333333334" y="355" class="date-sub" text-anchor="middle">21</text><text x="646.6666666666667" y="355" class="date-sub" text-anchor="middle">26</text><text x="770" y="355" class="date-sub" text-anchor="middle">31</text>
+      <line x1="30" y1="330" x2="770" y2="330" stroke="#444b6a" stroke-width="1" opacity="0.5" />
     </g>
 
-    <text x="400" y="400" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="12" fill="#4fd6be" letter-spacing="2">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
+    <text x="400" y="395" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="11" fill="#4fd6be" letter-spacing="1.5" opacity="0.8">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
   </svg>
