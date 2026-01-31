@@ -1,18 +1,28 @@
 const fs = require('fs');
-const { Octokit } = require('@octokit/rest');
+const { Octokit } = require('octokit');
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = process.env.GH_USERNAME;
 
 async function run() {
   try {
-    const { data: repos } = await octokit.rest.repos.listForUser({ username: owner, per_page: 100 });
+    // 1. Get all repos
+    const reposResponse = await octokit.request('GET /users/{username}/repos', {
+      username: owner,
+      per_page: 100
+    });
+    
     const totals = {};
 
-    for (const r of repos) {
-      if (r.fork) continue; // Skip forked repos
-      const { data: langs } = await octokit.rest.repos.getLanguages({ owner, repo: r.name });
-      for (const [lang, bytes] of Object.entries(langs)) {
+    // 2. Get languages for each repo
+    for (const r of reposResponse.data) {
+      if (r.fork) continue; 
+      const langResponse = await octokit.request('GET /repos/{owner}/{repo}/languages', {
+        owner: owner,
+        repo: r.name
+      });
+      
+      for (const [lang, bytes] of Object.entries(langResponse.data)) {
         totals[lang] = (totals[lang] || 0) + bytes;
       }
     }
@@ -20,13 +30,16 @@ async function run() {
     const sorted = Object.entries(totals)
       .map(([name, bytes]) => ({ name, bytes }))
       .sort((a, b) => b.bytes - a.bytes)
-      .slice(0, 6); // Top 6 languages
+      .slice(0, 6);
 
     const sum = sorted.reduce((a, b) => a + b.bytes, 0);
+    
+    // 3. Generate SVG
     const svg = generateSVG(sorted, sum);
     fs.writeFileSync('language-stats.svg', svg);
+    console.log("Successfully generated language-stats.svg");
   } catch (e) {
-    console.error(e);
+    console.error("Error details:", e.message);
     process.exit(1);
   }
 }
