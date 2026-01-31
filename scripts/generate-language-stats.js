@@ -44,7 +44,7 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
-    // --- Streak & Date Logic ---
+    // --- Current & Longest Streak Logic ---
     let currentStreak = 0;
     let longestStreak = 0;
     let tempStreak = 0;
@@ -52,17 +52,16 @@ async function run() {
     const todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
     const reversedDays = [...allDays].reverse();
+    // Start check from today if there are commits, else start from yesterday
     const startIdx = reversedDays[0].contributionCount === 0 ? 1 : 0;
     
-    // Calculate Current Streak + Start Date
     for (let i = startIdx; i < reversedDays.length; i++) {
       if (reversedDays[i].contributionCount > 0) {
         currentStreak++;
         streakStartDate = new Date(reversedDays[i].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-      } else break;
+      } else if (i > startIdx) break; 
     }
 
-    // Calculate Longest Streak
     allDays.forEach(d => {
       if (d.contributionCount > 0) {
         tempStreak++;
@@ -74,7 +73,7 @@ async function run() {
       langs: langTotals,
       totalBytes: totalBytes,
       streak: currentStreak,
-      longest: longestStreak,
+      longest: Math.max(longestStreak, currentStreak),
       streakStart: streakStartDate || todayStr,
       streakEnd: todayStr,
       totalCon: cal.totalContributions,
@@ -108,7 +107,8 @@ function generateSVG(data) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+      @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
+      @keyframes slide { from { stroke-dashoffset: 345; } to { stroke-dashoffset: ${345 - (Math.min(data.streak, 100) * 3.45)}; } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
       .stat { font: 400 13px 'Segoe UI', Arial; fill: #a9b1d6; }
@@ -116,18 +116,19 @@ function generateSVG(data) {
       .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
       .grade-text { font: 800 32px Arial; fill: #ff79c6; animation: pulse 2s infinite; }
       .streak-val { font: 800 36px 'Segoe UI', Arial; fill: #bb9af7; }
+      .ring { animation: slide 1.5s ease-out forwards; }
       .fire { animation: pulse 1.5s infinite; }
     </style>
     <rect width="800" height="420" rx="20" fill="#1a1b26"/>
     
     <g transform="translate(40, 40)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="4" fill="none"/>
-      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="4" fill="none" stroke-dasharray="345" stroke-dashoffset="${345 - (Math.min(data.streak, 100) * 3.45)}" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+      <circle class="ring" cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="4" fill="none" stroke-dasharray="345" stroke-dashoffset="345" stroke-linecap="round" transform="rotate(-90 60 60)"/>
       <path class="fire" d="M60 15c-4 7-8 10-8 15 0 4 3 7 8 7s8-3 8-7c0-5-4-8-8-15z" fill="#7aa2f7" transform="translate(0, -5)"/>
       <text x="60" y="75" text-anchor="middle" class="streak-val">${data.streak}</text>
       <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
       <text x="60" y="155" text-anchor="middle" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
-      <text x="60" y="175" text-anchor="middle" class="stat" font-size="11">Max: ${data.longest} Days</text>
+      <text x="60" y="175" text-anchor="middle" class="stat" font-size="11">Longest: ${data.longest}</text>
     </g>
 
     <g transform="translate(230, 50)">
