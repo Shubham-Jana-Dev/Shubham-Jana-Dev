@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="220">
+    <rect width="100%" height="100%" fill="#0d1117" rx="10" />
+    
+      <text x="10" y="35" fill="#9fef00" font-family="Segoe UI, sans-serif" font-size="14">HTML</text>
+      <rect x="110" y="25" width="250" height="10" rx="5" fill="#1e293b" />
+      <rect x="110" y="25" width="99.65065749956467" height="10" rx="5" fill="#9fef00" />
+      <text x="365" y="35" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">39.9%</text>
+      <text x="10" y="75" fill="#9fef00" font-family="Segoe UI, sans-serif" font-size="14">JavaScript</text>
+      <rect x="110" y="65" width="250" height="10" rx="5" fill="#1e293b" />
+      <rect x="110" y="65" width="87.25907498097251" height="10" rx="5" fill="#9fef00" />
+      <text x="365" y="75" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">34.9%</text>
+      <text x="10" y="115" fill="#9fef00" font-family="Segoe UI, sans-serif" font-size="14">Python</text>
+      <rect x="110" y="105" width="250" height="10" rx="5" fill="#1e293b" />
+      <rect x="110" y="105" width="43.445988381989544" height="10" rx="5" fill="#9fef00" />
+      <text x="365" y="115" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">17.4%</text>
+      <text x="10" y="155" fill="#9fef00" font-family="Segoe UI, sans-serif" font-size="14">CSS</text>
+      <rect x="110" y="145" width="250" height="10" rx="5" fill="#1e293b" />
+      <rect x="110" y="145" width="16.50450104969057" height="10" rx="5" fill="#9fef00" />
+      <text x="365" y="155" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">6.6%</text>
+      <text x="10" y="195" fill="#9fef00" font-family="Segoe UI, sans-serif" font-size="14">C</text>
+      <rect x="110" y="185" width="250" height="10" rx="5" fill="#1e293b" />
+      <rect x="110" y="185" width="3.1397780877826977" height="10" rx="5" fill="#9fef00" />
+      <text x="365" y="195" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">1.3%</text>
+  </svg>
