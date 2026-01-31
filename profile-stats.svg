@@ -1,0 +1,52 @@
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="480" height="380" viewBox="0 0 480 380" fill="none">
+    <style>
+      .label { font: 600 14px 'Segoe UI', Arial; fill: #7aa2f7; }
+      .stat { font: 400 12px 'Segoe UI', Arial; fill: #a9b1d6; }
+      .grade { font: 800 24px Arial; fill: #ff79c6; }
+    </style>
+    <rect width="480" height="380" rx="15" fill="#1a1b26"/>
+    
+    <text x="25" y="40" class="label" style="font-size:18px">Shubham's Developer Pulse</text>
+    <circle cx="420" cy="40" r="25" stroke="#ff79c6" stroke-width="2" fill="none" stroke-dasharray="120" stroke-dashoffset="30"/>
+    <text x="420" y="48" text-anchor="middle" class="grade">A+</text>
+
+    <text x="25" y="175" class="label" style="fill:#9ece6a">30-Day Contribution Pulse</text>
+    <polyline points="30,225.45454545454544 42.5,232.72727272727272 55,230.9090909090909 67.5,200 80,230.9090909090909 92.5,227.27272727272728 105,229.0909090909091 117.5,230.9090909090909 130,232.72727272727272 142.5,232.72727272727272 155,234.54545454545453 167.5,234.54545454545453 180,234.54545454545453 192.5,225.45454545454544 205,230.9090909090909 217.5,221.8181818181818 230,225.45454545454544 242.5,229.0909090909091 255,227.27272727272728 267.5,218.1818181818182 280,209.0909090909091 292.5,234.54545454545453 305,221.8181818181818 317.5,234.54545454545453 330,232.72727272727272 342.5,216.36363636363637 355,229.0909090909091 367.5,232.72727272727272 380,225.45454545454544 392.5,229.0909090909091 405,218.1818181818182" fill="none" stroke="#9ece6a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="30" y="260" class="stat" font-size="8">01</text><text x="92.5" y="260" class="stat" font-size="8">06</text><text x="155" y="260" class="stat" font-size="8">11</text><text x="217.5" y="260" class="stat" font-size="8">16</text><text x="280" y="260" class="stat" font-size="8">21</text><text x="342.5" y="260" class="stat" font-size="8">26</text><text x="405" y="260" class="stat" font-size="8">31</text>
+
+    <g transform="translate(25, 75)">
+      <text x="0" y="0" class="label">Impact</text>
+      <text x="0" y="25" class="stat">Total Activity: 658</text>
+      <text x="0" y="45" class="stat">Pull Requests: 2</text>
+      <text x="0" y="65" class="stat">Streak: 89 Days 🔥</text>
+    </g>
+
+    <g transform="translate(260, 75)">
+      <text x="0" y="0" class="label">Language Stack</text>
+      
+          <text x="0" y="25" class="stat" font-size="10">HTML</text>
+          <rect x="70" y="18" width="110" height="6" rx="3" fill="#444b6a"/>
+          <rect x="70" y="18" width="43.72732532217481" height="6" rx="3" fill="#e34c26"/>
+        
+          <text x="0" y="45" class="stat" font-size="10">JavaScript</text>
+          <rect x="70" y="38" width="110" height="6" rx="3" fill="#444b6a"/>
+          <rect x="70" y="38" width="38.588274778119136" height="6" rx="3" fill="#f1e05a"/>
+        
+          <text x="0" y="65" class="stat" font-size="10">Python</text>
+          <rect x="70" y="58" width="110" height="6" rx="3" fill="#444b6a"/>
+          <rect x="70" y="58" width="19.064368621260563" height="6" rx="3" fill="#3572A5"/>
+        
+          <text x="0" y="85" class="stat" font-size="10">CSS</text>
+          <rect x="70" y="78" width="110" height="6" rx="3" fill="#444b6a"/>
+          <rect x="70" y="78" width="7.242277219125706" height="6" rx="3" fill="#563d7c"/>
+        
+          <text x="0" y="105" class="stat" font-size="10">C</text>
+          <rect x="70" y="98" width="110" height="6" rx="3" fill="#444b6a"/>
+          <rect x="70" y="98" width="1.3777540593197768" height="6" rx="3" fill="#555555"/>
+        
+    </g>
+
+    <rect x="20" y="325" width="440" height="35" rx="10" fill="#24283b"/>
+    <text x="240" y="348" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="11" fill="#4fd6be">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
+  </svg>
