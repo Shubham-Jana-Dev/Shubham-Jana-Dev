@@ -31,7 +31,6 @@ async function run() {
     const user = result.user;
     const cal = user.contributionsCollection.contributionCalendar;
 
-    // 1. Process Languages & Total Bytes for %
     const langTotals = {};
     let totalBytes = 0;
     user.repositories.nodes.forEach(repo => {
@@ -41,12 +40,10 @@ async function run() {
       });
     });
 
-    // 2. Process Graph Data (Last 31 Days)
     const allDays = cal.weeks.flatMap(w => w.contributionDays);
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
-    // 3. Streak Calculation
     let currentStreak = 0;
     const reversedDays = [...allDays].reverse();
     const startIdx = reversedDays[0].contributionCount === 0 ? 1 : 0;
@@ -77,64 +74,71 @@ function generateSVG(data) {
   const topLangs = Object.entries(data.langs).sort((a,b) => b[1]-a[1]).slice(0, 5);
   const grade = data.totalCon > 1000 ? "S++" : data.totalCon > 500 ? "A+" : "A";
   
-  // Create Area Graph Path (Smooth Curves)
-  const graphWidth = 440;
-  const graphHeight = 60;
+  // Graph Logic: Wide Area Chart
+  const graphWidth = 740;
+  const graphHeight = 100;
   const points = data.graphDays.map((d, i) => {
     const x = 30 + (i * (graphWidth / 30));
-    const y = 340 - (d.contributionCount / data.maxDay * graphHeight);
+    const y = 350 - (d.contributionCount / data.maxDay * graphHeight);
     return `${x},${y}`;
   });
   
-  const pathData = `M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')} L470,340 L30,340 Z`;
+  const areaPath = `M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')} L770,350 L30,350 Z`;
 
   return `
-  <svg xmlns="http://www.w3.org/2000/svg" width="500" height="420" viewBox="0 0 500 420" fill="none">
+  <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      .label { font: 600 13px 'Segoe UI', Arial; fill: #7aa2f7; }
-      .stat { font: 400 12px 'Segoe UI', Arial; fill: #a9b1d6; }
-      .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
-      .grade { font: 800 22px Arial; fill: #ff79c6; }
-      .streak-val { font: 800 28px 'Segoe UI', Arial; fill: #bb9af7; }
+      .title { font: 700 20px 'Segoe UI', Arial; fill: #7aa2f7; }
+      .label { font: 600 14px 'Segoe UI', Arial; fill: #7aa2f7; }
+      .stat { font: 400 14px 'Segoe UI', Arial; fill: #a9b1d6; }
+      .percent { font: 600 12px 'Segoe UI', Arial; fill: #9ece6a; }
+      .grade-text { font: 800 32px Arial; fill: #ff79c6; }
+      .streak-val { font: 800 36px 'Segoe UI', Arial; fill: #bb9af7; }
     </style>
-    <rect width="500" height="420" rx="15" fill="#1a1b26"/>
+    <rect width="800" height="420" rx="20" fill="#1a1b26"/>
     
-    <g transform="translate(35, 45)">
-      <circle cx="45" cy="45" r="40" stroke="#444b6a" stroke-width="4" fill="none"/>
-      <circle cx="45" cy="45" r="40" stroke="#7aa2f7" stroke-width="4" fill="none" stroke-dasharray="251" stroke-dashoffset="${251 - (Math.min(data.streak, 100) * 2.51)}" stroke-linecap="round" transform="rotate(-90 45 45)"/>
-      <text x="45" y="55" text-anchor="middle" class="streak-val">${data.streak}</text>
-      <text x="45" y="105" text-anchor="middle" class="label" style="fill:#bb9af7">Current Streak</text>
+    <g transform="translate(40, 40)">
+      <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="6" fill="none"/>
+      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="${345 - (Math.min(data.streak, 100) * 3.45)}" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+      <text x="60" y="72" text-anchor="middle" class="streak-val">${data.streak}</text>
+      <text x="60" y="145" text-anchor="middle" class="label">CURRENT STREAK</text>
     </g>
 
-    <g transform="translate(165, 50)">
-      <text x="0" y="0" class="label">Impact</text>
-      <text x="0" y="25" class="stat">Contributions: ${data.totalCon}</text>
-      <text x="0" y="45" class="stat">Pull Requests: ${data.prs}</text>
-      <text x="0" y="65" class="stat">Grade: ${grade}</text>
-      <path d="M0 85 h100" stroke="#444b6a" stroke-width="1"/>
+    <g transform="translate(220, 50)">
+      <text x="0" y="0" class="title">Activity Impact</text>
+      <text x="0" y="35" class="stat">Total Contributions: ${data.totalCon}</text>
+      <text x="0" y="65" class="stat">Pull Requests: ${data.prs}</text>
+      <text x="0" y="95" class="stat">Total Commits: ${data.commits}</text>
     </g>
 
-    <g transform="translate(315, 50)">
-      <text x="0" y="0" class="label">Top Stack</text>
+    <g transform="translate(430, 50)">
+      <circle cx="50" cy="50" r="45" stroke="#ff79c6" stroke-width="3" fill="none" opacity="0.2"/>
+      <circle cx="50" cy="50" r="45" stroke="#ff79c6" stroke-width="4" fill="none" stroke-dasharray="282" stroke-dashoffset="60" stroke-linecap="round"/>
+      <text x="50" y="62" text-anchor="middle" class="grade-text">${grade}</text>
+      <text x="50" y="125" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
+    </g>
+
+    <g transform="translate(560, 50)">
+      <text x="0" y="0" class="title">Language Stack</text>
       ${topLangs.map((l, i) => {
         const pct = ((l[1] / data.totalBytes) * 100).toFixed(1);
         return `
-          <text x="0" y="${25 + i*22}" class="stat">${l[0]}</text>
-          <rect x="70" y="${17 + i*22}" width="65" height="6" rx="3" fill="#444b6a"/>
-          <rect x="70" y="${17 + i*22}" width="${(pct/100)*65}" height="6" rx="3" fill="${COLORS[l[0]] || COLORS.Default}"/>
-          <text x="140" y="${25 + i*22}" class="percent">${pct}%</text>
+          <text x="0" y="${35 + i*22}" class="stat">${l[0]}</text>
+          <rect x="90" y="${26 + i*22}" width="100" height="8" rx="4" fill="#444b6a"/>
+          <rect x="90" y="${26 + i*22}" width="${(pct/100)*100}" height="8" rx="4" fill="${COLORS[l[0]] || COLORS.Default}"/>
+          <text x="200" y="${35 + i*22}" class="percent">${pct}%</text>
         `;
       }).join('')}
     </g>
 
-    <g transform="translate(0, 10)">
-      <text x="30" y="230" class="label" style="fill:#9ece6a">30-Day Momentum Pulse</text>
-      <path d="${pathData}" fill="#9ece6a" fill-opacity="0.1" />
-      <path d="M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')}" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(0, 0)">
+      <text x="30" y="220" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
+      <path d="${areaPath}" fill="#9ece6a" fill-opacity="0.1" />
+      <path d="M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')}" stroke="#9ece6a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="30" y1="350" x2="770" y2="350" stroke="#444b6a" stroke-width="1" />
     </g>
-    
-    <rect x="25" y="370" width="450" height="30" rx="10" fill="#24283b"/>
-    <text x="250" y="389" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="#4fd6be">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
+
+    <text x="400" y="400" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="12" fill="#4fd6be" letter-spacing="2">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
   </svg>`;
 }
 
