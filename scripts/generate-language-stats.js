@@ -16,6 +16,7 @@ async function run() {
         repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
           nodes { languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
         }
+        # Fetching global totals to ensure PRs and Contributions update correctly
         contributionsCollection {
           totalCommitContributions
           totalPullRequestContributions
@@ -44,6 +45,7 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
+    // --- Streak Logic ---
     let currentStreak = 0;
     let longestStreak = 0;
     let tempStreak = 0;
@@ -75,8 +77,8 @@ async function run() {
       streakStart: streakStartDate || todayStr,
       streakEnd: todayStr,
       totalCon: cal.totalContributions,
-      prs: user.totalPullRequestContributions || 0,
-      commits: user.totalCommitContributions || 0,
+      prs: user.contributionsCollection.totalPullRequestContributions,
+      commits: user.contributionsCollection.totalCommitContributions,
       graphDays: last31Days,
       maxDay: maxDayCount
     });
@@ -90,8 +92,6 @@ async function run() {
 
 function generateSVG(data) {
   const topLangs = Object.entries(data.langs).sort((a,b) => b[1]-a[1]).slice(0, 5);
-  const grade = "A+"; // Force high contrast for A+
-  
   const graphWidth = 740;
   const graphHeight = 80;
   const points = data.graphDays.map((d, i) => {
@@ -105,27 +105,28 @@ function generateSVG(data) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
-      @keyframes dash { from { stroke-dashoffset: 345; } to { stroke-dashoffset: ${345 - (Math.min(data.streak, 100) * 3.45)}; } }
+      @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+      @keyframes sparkle { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); opacity: 1; } }
+      @keyframes load { from { stroke-dashoffset: 345; } to { stroke-dashoffset: ${345 - (Math.min(data.streak, 100) * 3.45)}; } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
       .stat { font: 400 13px 'Segoe UI', Arial; fill: #a9b1d6; }
-      .date-sub { font: 400 9px 'Segoe UI', Arial; fill: #565f89; }
+      .date-sub { font: 400 8px 'Segoe UI', Arial; fill: #565f89; }
       .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
-      .grade-text { font: 800 32px Arial; fill: #ff79c6; animation: pulse 2s infinite; }
+      .grade-text { font: 800 32px Arial; fill: #ff79c6; }
       .streak-val { font: 800 36px 'Segoe UI', Arial; fill: #bb9af7; }
-      .fire-icon { fill: #ff9e64; animation: pulse 1.5s infinite; }
-      .ring-animate { animation: dash 2s ease-out forwards; }
+      .sparkle { fill: #ff79c6; animation: sparkle 2s infinite; }
+      .fire { fill: #ff9e64; animation: pulse 1.5s infinite; }
     </style>
     
     <rect width="800" height="420" rx="20" fill="#1a1b26"/>
     
     <g transform="translate(40, 40)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="4" fill="none"/>
-      <circle class="ring-animate" cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="345" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-      
-      <path class="fire-icon" d="M60 12c0 0-8 10-8 18s4 12 8 12 8-4 8-12-8-18-8-18zm-2 22c-1.5-1-2-3-1-5 1-2 3-2 3-2s-1 4 1 5c1 1 2 0 2 0s-1 4-5 2z" transform="translate(0, -8)"/>
-      
+      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="345" stroke-linecap="round" transform="rotate(-90 60 60)">
+        <animate attributeName="stroke-dashoffset" from="345" to="${345 - (Math.min(data.streak, 100) * 3.45)}" dur="2s" fill="freeze" />
+      </circle>
+      <path class="fire" d="M60 18c-5 8-7 12-7 17s3 8 7 8 7-3 7-8c0-5-2-9-7-17zm-1 20c-1-1-2-2-1-4 1-1 2-1 2-1s-1 3 1 3c1 0 1-1 1-1s0 3-3 3z" transform="translate(0, -10)"/>
       <text x="60" y="75" text-anchor="middle" class="streak-val">${data.streak}</text>
       <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
       <text x="60" y="155" text-anchor="middle" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
@@ -140,10 +141,13 @@ function generateSVG(data) {
     </g>
 
     <g transform="translate(440, 50)">
-      <circle cx="50" cy="50" r="46" stroke="#444b6a" stroke-width="2" fill="none"/>
-      <circle cx="50" cy="50" r="46" stroke="#ff79c6" stroke-width="5" fill="none" stroke-dasharray="290" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-      <text x="50" y="62" text-anchor="middle" class="grade-text">${grade}</text>
+      <circle cx="50" cy="50" r="46" stroke="#ff79c6" stroke-width="3" fill="none" opacity="0.3"/>
+      <path d="M50 4 A46 46 0 0 1 96 50" stroke="#ff79c6" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <text x="50" y="62" text-anchor="middle" class="grade-text">A+</text>
       <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
+      <path class="sparkle" d="M90 20l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
+      <path class="sparkle" d="M10 30l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
+      <path class="sparkle" d="M85 80l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
     </g>
 
     <g transform="translate(565, 50)">
@@ -164,8 +168,7 @@ function generateSVG(data) {
       <path d="${areaPath}" fill="#9ece6a" fill-opacity="0.1" />
       <path d="M${points[0]} ${points.slice(1).map(p => `L${p}`).join(' ')}" stroke="#9ece6a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       ${data.graphDays.map((d, i) => {
-        // Show every 3rd day to prevent overlapping while showing more numbers
-        return i % 3 === 0 ? `<text x="${30 + i*(graphWidth/30)}" y="355" class="date-sub" text-anchor="middle">${d.date.split('-')[2]}</text>` : '';
+        return `<text x="${30 + i*(graphWidth/30)}" y="355" class="date-sub" text-anchor="middle">${d.date.split('-')[2]}</text>`;
       }).join('')}
       <line x1="30" y1="330" x2="770" y2="330" stroke="#444b6a" stroke-width="1" opacity="0.3" />
     </g>
