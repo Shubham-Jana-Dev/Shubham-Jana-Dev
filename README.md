@@ -5,9 +5,9 @@
 </p>
 
 ---
-
+<p align="center">
 ### **📊 Activity & Impact**
-
+</p>
 
 <p align="center">
   <img src="./profile-stats.svg?v=1" width="100%" alt="Shubham's Dashboard" />
