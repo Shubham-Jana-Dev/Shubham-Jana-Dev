@@ -44,15 +44,27 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
+    // --- Dynamic Date & Streak Logic ---
+    const today = new Date();
+    const todayStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    const yearStart = new Date(today.getFullYear(), 0, 1).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    
+    // Using your current data from the screenshot (Nov 3 - Jan 31)
+    const streakStart = "Nov 3, 2025";
+    const streakEnd = "Jan 31, 2026";
+
     const svg = generateSVG({
       langs: langTotals,
       totalBytes: totalBytes,
-      streak: 90, // Your streak count
+      streak: 90, 
       totalCon: cal.totalContributions,
       prs: user.contributionsCollection.totalPullRequestContributions,
       commits: user.contributionsCollection.totalCommitContributions,
       graphDays: last31Days,
-      maxDay: maxDayCount
+      maxDay: maxDayCount,
+      streakStart,
+      streakEnd,
+      yearStart
     });
 
     fs.writeFileSync('profile-stats.svg', svg);
@@ -77,26 +89,27 @@ function generateSVG(data) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      @keyframes sparkle { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.5); opacity: 1; } }
-      @keyframes neon-pulse { 0%, 100% { stroke-width: 6; opacity: 0.8; } 50% { stroke-width: 9; opacity: 1; } }
+      @keyframes sparkle { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.4); opacity: 1; } }
+      @keyframes neon-glow { 0%, 100% { stroke-width: 7; filter: drop-shadow(0 0 2px #ff79c6); } 50% { stroke-width: 10; filter: drop-shadow(0 0 8px #ff79c6); } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
       .stat { font: 400 13px 'Segoe UI', Arial; fill: #a9b1d6; }
-      .date-sub { font: 400 8px 'Segoe UI', Arial; fill: #565f89; }
+      .date-sub { font: 400 9px 'Segoe UI', Arial; fill: #565f89; }
       .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
-      .grade-text { font: 800 38px Arial; fill: #ff79c6; filter: drop-shadow(0 0 8px rgba(255,121,198,0.5)); }
+      .grade-text { font: 800 38px Arial; fill: #ff79c6; }
       .streak-val { font: 800 42px 'Segoe UI', Arial; fill: #bb9af7; }
       .sparkle { fill: #ff79c6; animation: sparkle 2s infinite; }
-      .neon-ring { animation: neon-pulse 1.5s infinite ease-in-out; }
+      .neon-ring { animation: neon-glow 1.5s infinite ease-in-out; }
     </style>
     
     <rect width="800" height="420" rx="20" fill="#1a1b26"/>
     
     <g transform="translate(40, 40)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="4" fill="none"/>
-      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="120" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+      <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="150" stroke-linecap="round" transform="rotate(-90 60 60)"/>
       <text x="60" y="75" text-anchor="middle" class="streak-val">${data.streak}</text>
-      <text x="60" y="140" text-anchor="middle" class="label">STREAK DAYS</text>
+      <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
+      <text x="60" y="158" text-anchor="middle" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
     </g>
 
     <g transform="translate(230, 50)">
@@ -104,17 +117,19 @@ function generateSVG(data) {
       <text x="0" y="35" class="stat">Total Contributions: ${data.totalCon}</text>
       <text x="0" y="60" class="stat">Pull Requests: ${data.prs}</text>
       <text x="0" y="85" class="stat">Total Commits: ${data.commits}</text>
+      <text x="0" y="110" class="stat">Longest Streak: ${data.streak} Days</text>
+      <text x="0" y="125" class="date-sub">${data.streakStart} - ${data.streakEnd}</text>
     </g>
 
     <g transform="translate(440, 50)">
-      <circle cx="50" cy="50" r="46" stroke="#444b6a" stroke-width="3" fill="none" opacity="0.3"/>
-      <path class="neon-ring" d="M50 4 A46 46 0 0 1 98 55" stroke="#ff79c6" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <circle cx="50" cy="50" r="46" stroke="#444b6a" stroke-width="4" fill="none" opacity="0.3"/>
+      <path class="neon-ring" d="M50 4 A46 46 0 0 1 96 50" stroke="#ff79c6" stroke-width="8" stroke-linecap="round" fill="none"/>
       <text x="50" y="64" text-anchor="middle" class="grade-text">A+</text>
       <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
       
-      <path class="sparkle" d="M88 12l2.5 2.5 2.5-2.5-2.5-2.5z" style="animation-delay: 0s;"/>
-      <path class="sparkle" d="M12 28l2 2 2-2-2-2z" style="animation-delay: 0.7s;"/>
-      <path class="sparkle" d="M92 82l2.5 2.5 2.5-2.5-2.5-2.5z" style="animation-delay: 1.4s;"/>
+      <path class="sparkle" d="M90 15l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
+      <path class="sparkle" d="M10 30l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
+      <path class="sparkle" d="M85 85l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
     </g>
 
     <g transform="translate(565, 50)">
