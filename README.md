@@ -3,6 +3,9 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/212379774-4b5c7379-9941-4712-a1f9-8472f10b80e8.gif" alt="Animated typing text" width="600"/>
 </p>
+</p>
+  <img src="https://raw.githubusercontent.com/Shubham-Jana-Dev/Shubham-Jana-Dev/output/github-contribution-grid-snake.svg?v=1" alt="Snake animation" height="180" />
+</p>
 
 ---
 
