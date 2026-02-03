@@ -6,7 +6,7 @@ const owner = process.env.GH_USERNAME;
 
 const COLORS = {
   JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#563d7c',
-  Python: '#3572A5', TypeScript: '#3178c6', Default: '#9ece6a'
+  Python: '#3572A5', TypeScript: '#3178c6', 'C++': '#f34b7d', C: '#555555', Default: '#9ece6a'
 };
 
 async function run() {
@@ -14,7 +14,11 @@ async function run() {
     const query = `query($owner:String!) {
       user(login: $owner) {
         repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
-          nodes { languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
+          nodes { 
+            languages(first: 20, orderBy: {field: SIZE, direction: DESC}) { 
+              edges { size node { name } } 
+            } 
+          }
         }
         contributionsCollection {
           totalCommitContributions
@@ -31,6 +35,7 @@ async function run() {
     const user = result.user;
     const cal = user.contributionsCollection.contributionCalendar;
 
+    // --- Improved Language Aggregation ---
     const langTotals = {};
     let totalBytes = 0;
     user.repositories.nodes.forEach(repo => {
@@ -44,14 +49,18 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
-    // --- Dynamic Streak Logic ---
+    // --- Fully Dynamic Date Logic ---
     let currentStreak = 0;
     let streakStartDate = "";
-    const todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    // Dynamically get today's date for the display
+    const today = new Date();
+    const todayStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     
-    // Scan backwards for the current streak
     const reversedDays = [...allDays].reverse();
-    for (let i = 0; i < reversedDays.length; i++) {
+    // Skip today if no contributions yet to find the active streak
+    let startIndex = reversedDays[0].contributionCount === 0 ? 1 : 0;
+
+    for (let i = startIndex; i < reversedDays.length; i++) {
       if (reversedDays[i].contributionCount > 0) {
         currentStreak++;
         streakStartDate = new Date(reversedDays[i].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -61,14 +70,14 @@ async function run() {
     const svg = generateSVG({
       langs: langTotals,
       totalBytes: totalBytes,
-      streak: currentStreak || 90, // Fallback to 90 if calc fails
+      streak: currentStreak,
       totalCon: cal.totalContributions,
       prs: user.contributionsCollection.totalPullRequestContributions,
       commits: user.contributionsCollection.totalCommitContributions,
       graphDays: last31Days,
       maxDay: maxDayCount,
-      streakStart: streakStartDate || "Nov 3, 2025",
-      streakEnd: "Jan 31, 2026"
+      streakStart: streakStartDate || "N/A",
+      streakEnd: todayStr // This now updates every time the script runs
     });
 
     fs.writeFileSync('profile-stats.svg', svg);
@@ -93,7 +102,6 @@ function generateSVG(data) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      @keyframes sparkle { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.4); opacity: 1; } }
       @keyframes neon-pulse { 0%, 100% { stroke-width: 8; filter: drop-shadow(0 0 3px #ff79c6); } 50% { stroke-width: 12; filter: drop-shadow(0 0 12px #ff79c6); } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
@@ -102,7 +110,6 @@ function generateSVG(data) {
       .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
       .grade-text { font: 800 38px Arial; fill: #ff79c6; }
       .streak-val { font: 800 42px 'Segoe UI', Arial; fill: #bb9af7; }
-      .sparkle { fill: #ff79c6; animation: sparkle 2s infinite; }
       .neon-ring { animation: neon-pulse 1.5s infinite ease-in-out; }
     </style>
     
@@ -130,10 +137,6 @@ function generateSVG(data) {
       <path class="neon-ring" d="M50 4 A46 46 0 0 1 50 96" stroke="#ff79c6" stroke-width="10" stroke-linecap="round" fill="none"/>
       <text x="50" y="64" text-anchor="middle" class="grade-text">A+</text>
       <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
-      
-      <path class="sparkle" d="M92 30l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
-      <path class="sparkle" d="M8 50l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
-      <path class="sparkle" d="M92 70l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
     </g>
 
     <g transform="translate(565, 50)">
