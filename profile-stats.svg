@@ -1,7 +1,6 @@
 
   <svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none">
     <style>
-      @keyframes sparkle { 0%, 100% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.4); opacity: 1; } }
       @keyframes neon-pulse { 0%, 100% { stroke-width: 8; filter: drop-shadow(0 0 3px #ff79c6); } 50% { stroke-width: 12; filter: drop-shadow(0 0 12px #ff79c6); } }
       .title { font: 700 18px 'Segoe UI', Arial; fill: #7aa2f7; }
       .label { font: 600 12px 'Segoe UI', Arial; fill: #7aa2f7; }
@@ -10,7 +9,6 @@
       .percent { font: 600 11px 'Segoe UI', Arial; fill: #9ece6a; }
       .grade-text { font: 800 38px Arial; fill: #ff79c6; }
       .streak-val { font: 800 42px 'Segoe UI', Arial; fill: #bb9af7; }
-      .sparkle { fill: #ff79c6; animation: sparkle 2s infinite; }
       .neon-ring { animation: neon-pulse 1.5s infinite ease-in-out; }
     </style>
     
@@ -21,7 +19,7 @@
       <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="6" fill="none" stroke-dasharray="345" stroke-dashoffset="172" stroke-linecap="round" transform="rotate(-90 60 60)"/>
       <text x="60" y="75" text-anchor="middle" class="streak-val">92</text>
       <text x="60" y="140" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="158" text-anchor="middle" class="date-sub">Nov 4, 2025 - Jan 31, 2026</text>
+      <text x="60" y="158" text-anchor="middle" class="date-sub">Nov 4, 2025 - Feb 3, 2026</text>
     </g>
 
     <g transform="translate(230, 50)">
@@ -30,7 +28,7 @@
       <text x="0" y="60" class="stat">Pull Requests: 6</text>
       <text x="0" y="85" class="stat">Total Commits: 681</text>
       <text x="0" y="115" class="label" style="fill:#bb9af7">Longest Streak: 92 Days</text>
-      <text x="0" y="130" class="date-sub">Nov 4, 2025 - Jan 31, 2026</text>
+      <text x="0" y="130" class="date-sub">Nov 4, 2025 - Feb 3, 2026</text>
     </g>
 
     <g transform="translate(440, 50)">
@@ -38,10 +36,6 @@
       <path class="neon-ring" d="M50 4 A46 46 0 0 1 50 96" stroke="#ff79c6" stroke-width="10" stroke-linecap="round" fill="none"/>
       <text x="50" y="64" text-anchor="middle" class="grade-text">A+</text>
       <text x="50" y="120" text-anchor="middle" class="label" style="fill:#ff79c6">DEV RANK</text>
-      
-      <path class="sparkle" d="M92 30l2 2 2-2-2-2z" style="animation-delay: 0s;"/>
-      <path class="sparkle" d="M8 50l1.5 1.5 1.5-1.5-1.5-1.5z" style="animation-delay: 0.5s;"/>
-      <path class="sparkle" d="M92 70l2 2 2-2-2-2z" style="animation-delay: 1.2s;"/>
     </g>
 
     <g transform="translate(565, 50)">
@@ -69,7 +63,7 @@
         
           <text x="0" y="120" class="stat">C</text>
           <rect x="85" y="111" width="90" height="7" rx="3.5" fill="#444b6a"/>
-          <rect x="85" y="111" width="1.3499999999999999" height="7" rx="3.5" fill="#9ece6a"/>
+          <rect x="85" y="111" width="1.3499999999999999" height="7" rx="3.5" fill="#555555"/>
           <text x="185" y="120" class="percent">1.5%</text>
         
     </g>
