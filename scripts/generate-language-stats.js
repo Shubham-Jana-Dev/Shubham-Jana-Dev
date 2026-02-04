@@ -4,9 +4,11 @@ const { Octokit } = require('octokit');
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = process.env.GH_USERNAME;
 
+// Added C++ and C explicitly
 const COLORS = {
   JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#563d7c',
-  Python: '#3572A5', TypeScript: '#3178c6', 'C++': '#f34b7d', C: '#555555', Default: '#9ece6a'
+  Python: '#3572A5', TypeScript: '#3178c6', 'C++': '#f34b7d', 
+  C: '#555555', Default: '#9ece6a'
 };
 
 async function run() {
@@ -35,7 +37,6 @@ async function run() {
     const user = result.user;
     const cal = user.contributionsCollection.contributionCalendar;
 
-    // --- Improved Language Aggregation ---
     const langTotals = {};
     let totalBytes = 0;
     user.repositories.nodes.forEach(repo => {
@@ -49,15 +50,12 @@ async function run() {
     const last31Days = allDays.slice(-31);
     const maxDayCount = Math.max(...last31Days.map(d => d.contributionCount), 1);
 
-    // --- Fully Dynamic Date Logic ---
     let currentStreak = 0;
     let streakStartDate = "";
-    // Dynamically get today's date for the display
     const today = new Date();
     const todayStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     
     const reversedDays = [...allDays].reverse();
-    // Skip today if no contributions yet to find the active streak
     let startIndex = reversedDays[0].contributionCount === 0 ? 1 : 0;
 
     for (let i = startIndex; i < reversedDays.length; i++) {
@@ -77,7 +75,7 @@ async function run() {
       graphDays: last31Days,
       maxDay: maxDayCount,
       streakStart: streakStartDate || "N/A",
-      streakEnd: todayStr // This now updates every time the script runs
+      streakEnd: todayStr 
     });
 
     fs.writeFileSync('profile-stats.svg', svg);
@@ -88,7 +86,8 @@ async function run() {
 }
 
 function generateSVG(data) {
-  const topLangs = Object.entries(data.langs).sort((a,b) => b[1]-a[1]).slice(0, 5);
+  // Increased slice to 6 to make sure C++ is included
+  const topLangs = Object.entries(data.langs).sort((a,b) => b[1]-a[1]).slice(0, 6);
   const graphWidth = 740;
   const graphHeight = 80;
   const points = data.graphDays.map((d, i) => {
@@ -142,11 +141,14 @@ function generateSVG(data) {
     <g transform="translate(565, 50)">
       <text x="0" y="0" class="title">Language Stack</text>
       ${topLangs.map((l, i) => {
-        const pct = ((l[1] / data.totalBytes) * 100).toFixed(1);
+        const rawPct = (l[1] / data.totalBytes) * 100;
+        const pct = rawPct.toFixed(1);
+        // Visual boost: ensures bars are at least 4% wide for visibility
+        const barWidth = Math.max((rawPct / 100) * 90, 4); 
         return `
           <text x="0" y="${32 + i*22}" class="stat">${l[0]}</text>
           <rect x="85" y="${23 + i*22}" width="90" height="7" rx="3.5" fill="#444b6a"/>
-          <rect x="85" y="${23 + i*22}" width="${(pct/100)*90}" height="7" rx="3.5" fill="${COLORS[l[0]] || COLORS.Default}"/>
+          <rect x="85" y="${23 + i*22}" width="${barWidth}" height="7" rx="3.5" fill="${COLORS[l[0]] || COLORS.Default}"/>
           <text x="185" y="${32 + i*22}" class="percent">${pct}%</text>
         `;
       }).join('')}
