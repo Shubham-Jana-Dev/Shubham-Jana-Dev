@@ -54,8 +54,8 @@
         
           <text x="0" y="76" class="stat">Python</text>
           <rect x="80" y="67" width="110" height="7" rx="3.5" fill="#444b6a"/>
-          <rect x="80" y="67" width="19.689999999999998" height="7" rx="3.5" fill="#3572A5"/>
-          <text x="195" y="76" class="percent">17.9%</text>
+          <rect x="80" y="67" width="19.8" height="7" rx="3.5" fill="#3572A5"/>
+          <text x="195" y="76" class="percent">18.0%</text>
         
           <text x="0" y="98" class="stat">CSS</text>
           <rect x="80" y="89" width="110" height="7" rx="3.5" fill="#444b6a"/>
