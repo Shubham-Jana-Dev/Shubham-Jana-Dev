@@ -17,17 +17,17 @@
     <g transform="translate(50, 50)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="2" fill="none" opacity="0.3"/>
       <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-      <text x="60" y="72" text-anchor="middle" class="streak-val">110</text>
+      <text x="60" y="72" text-anchor="middle" class="streak-val">111</text>
       <text x="60" y="135" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 4 - Feb 21</text>
+      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 4 - Feb 22</text>
     </g>
 
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="32" class="stat">Total Contributions: 825</text>
-      <text x="0" y="54" class="stat">Total Commits: 783</text>
+      <text x="0" y="32" class="stat">Total Contributions: 828</text>
+      <text x="0" y="54" class="stat">Total Commits: 786</text>
       <text x="0" y="76" class="stat">Stars Collected: 113 ★</text>
-      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 110 Days</text>
+      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 111 Days</text>
       <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
     </g>
 
@@ -43,18 +43,18 @@
       
           <text x="0" y="30" class="stat">HTML</text>
           <rect x="85" y="21" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="21" width="39.1" height="6" rx="3" fill="#e34c26"/>
-          <text x="190" y="30" class="percent">39.1%</text>
+          <rect x="85" y="21" width="39.4" height="6" rx="3" fill="#e34c26"/>
+          <text x="190" y="30" class="percent">39.4%</text>
         
           <text x="0" y="52" class="stat">JavaScript</text>
           <rect x="85" y="43" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="43" width="33.4" height="6" rx="3" fill="#f1e05a"/>
-          <text x="190" y="52" class="percent">33.4%</text>
+          <rect x="85" y="43" width="33.3" height="6" rx="3" fill="#f1e05a"/>
+          <text x="190" y="52" class="percent">33.3%</text>
         
           <text x="0" y="74" class="stat">Python</text>
           <rect x="85" y="65" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="65" width="18.8" height="6" rx="3" fill="#3572A5"/>
-          <text x="190" y="74" class="percent">18.8%</text>
+          <rect x="85" y="65" width="18.7" height="6" rx="3" fill="#3572A5"/>
+          <text x="190" y="74" class="percent">18.7%</text>
         
           <text x="0" y="96" class="stat">CSS</text>
           <rect x="85" y="87" width="100" height="6" rx="3" fill="#444b6a"/>
@@ -75,9 +75,9 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,344.19354838709677 L64,330.64516129032256 L88,344.19354838709677 L112,342.258064516129 L136,324.83870967741933 L160,338.38709677419354 L184,342.258064516129 L208,334.51612903225805 L232,338.38709677419354 L256,290 L280,326.7741935483871 L304,315.1612903225806 L328,326.7741935483871 L352,326.7741935483871 L376,328.7096774193548 L400,342.258064516129 L424,338.38709677419354 L448,338.38709677419354 L472,330.64516129032256 L496,340.3225806451613 L520,336.4516129032258 L544,338.38709677419354 L568,342.258064516129 L592,348.06451612903226 L616,348.06451612903226 L640,348.06451612903226 L664,336.4516129032258 L688,328.7096774193548 L712,342.258064516129 L736,336.4516129032258 L760,344.19354838709677 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,344.19354838709677 L64,330.64516129032256 L88,344.19354838709677 L112,342.258064516129 L136,324.83870967741933 L160,338.38709677419354 L184,342.258064516129 L208,334.51612903225805 L232,338.38709677419354 L256,290 L280,326.7741935483871 L304,315.1612903225806 L328,326.7741935483871 L352,326.7741935483871 L376,328.7096774193548 L400,342.258064516129 L424,338.38709677419354 L448,338.38709677419354 L472,330.64516129032256 L496,340.3225806451613 L520,336.4516129032258 L544,338.38709677419354 L568,342.258064516129 L592,348.06451612903226 L616,348.06451612903226 L640,348.06451612903226 L664,336.4516129032258 L688,328.7096774193548 L712,342.258064516129 L736,336.4516129032258 L760,344.19354838709677" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="40" y="375" class="date-sub" text-anchor="middle">22</text><text x="160" y="375" class="date-sub" text-anchor="middle">27</text><text x="280" y="375" class="date-sub" text-anchor="middle">01</text><text x="400" y="375" class="date-sub" text-anchor="middle">06</text><text x="520" y="375" class="date-sub" text-anchor="middle">11</text><text x="640" y="375" class="date-sub" text-anchor="middle">16</text><text x="760" y="375" class="date-sub" text-anchor="middle">21</text>
+      <path d="M40,330.64516129032256 L64,344.19354838709677 L88,342.258064516129 L112,324.83870967741933 L136,338.38709677419354 L160,342.258064516129 L184,334.51612903225805 L208,338.38709677419354 L232,290 L256,326.7741935483871 L280,315.1612903225806 L304,326.7741935483871 L328,326.7741935483871 L352,328.7096774193548 L376,342.258064516129 L400,338.38709677419354 L424,338.38709677419354 L448,330.64516129032256 L472,340.3225806451613 L496,336.4516129032258 L520,338.38709677419354 L544,342.258064516129 L568,348.06451612903226 L592,348.06451612903226 L616,348.06451612903226 L640,336.4516129032258 L664,328.7096774193548 L688,342.258064516129 L712,336.4516129032258 L736,344.19354838709677 L760,344.19354838709677 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,330.64516129032256 L64,344.19354838709677 L88,342.258064516129 L112,324.83870967741933 L136,338.38709677419354 L160,342.258064516129 L184,334.51612903225805 L208,338.38709677419354 L232,290 L256,326.7741935483871 L280,315.1612903225806 L304,326.7741935483871 L328,326.7741935483871 L352,328.7096774193548 L376,342.258064516129 L400,338.38709677419354 L424,338.38709677419354 L448,330.64516129032256 L472,340.3225806451613 L496,336.4516129032258 L520,338.38709677419354 L544,342.258064516129 L568,348.06451612903226 L592,348.06451612903226 L616,348.06451612903226 L640,336.4516129032258 L664,328.7096774193548 L688,342.258064516129 L712,336.4516129032258 L736,344.19354838709677 L760,344.19354838709677" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="375" class="date-sub" text-anchor="middle">23</text><text x="160" y="375" class="date-sub" text-anchor="middle">28</text><text x="280" y="375" class="date-sub" text-anchor="middle">02</text><text x="400" y="375" class="date-sub" text-anchor="middle">07</text><text x="520" y="375" class="date-sub" text-anchor="middle">12</text><text x="640" y="375" class="date-sub" text-anchor="middle">17</text><text x="760" y="375" class="date-sub" text-anchor="middle">22</text>
     </g>
 
     <text x="400" y="405" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="#4fd6be" letter-spacing="2" opacity="0.6">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
