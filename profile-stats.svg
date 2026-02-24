@@ -43,18 +43,18 @@
       
           <text x="0" y="30" class="stat">HTML</text>
           <rect x="85" y="21" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="21" width="40.2" height="6" rx="3" fill="#e34c26"/>
-          <text x="190" y="30" class="percent">40.2%</text>
+          <rect x="85" y="21" width="40.1" height="6" rx="3" fill="#e34c26"/>
+          <text x="190" y="30" class="percent">40.1%</text>
         
           <text x="0" y="52" class="stat">JavaScript</text>
           <rect x="85" y="43" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="43" width="32.9" height="6" rx="3" fill="#f1e05a"/>
-          <text x="190" y="52" class="percent">32.9%</text>
+          <rect x="85" y="43" width="32.8" height="6" rx="3" fill="#f1e05a"/>
+          <text x="190" y="52" class="percent">32.8%</text>
         
           <text x="0" y="74" class="stat">Python</text>
           <rect x="85" y="65" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="65" width="18.5" height="6" rx="3" fill="#3572A5"/>
-          <text x="190" y="74" class="percent">18.5%</text>
+          <rect x="85" y="65" width="18.6" height="6" rx="3" fill="#3572A5"/>
+          <text x="190" y="74" class="percent">18.6%</text>
         
           <text x="0" y="96" class="stat">CSS</text>
           <rect x="85" y="87" width="100" height="6" rx="3" fill="#444b6a"/>
