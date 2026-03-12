@@ -26,7 +26,7 @@
 ### **🛠️ Technologies I Use**
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=react,js,tailwind,html,css,c,python,cpp,fastapi,docker,linux,git,raspberrypi,anaconda,vscode,mysql,,numpy,pandas,matplotlib&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=react,js,tailwind,html,css,c,python,cpp,fastapi,docker,linux,git,raspberrypi,anaconda,vscode,mysql,vim,numpy,pandas,matplotlib&theme=dark" />
 </p>
 
 ---
