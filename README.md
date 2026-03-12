@@ -8,7 +8,6 @@
   <img src="./profile-stats.svg?v=1" width="100%" alt="Shubham's Dashboard" />
 </p>
 </p>
-  ### **🛠️ Technologies I Use**
 
 ### **🛠️ Technologies I Use**
 
@@ -37,13 +36,7 @@
 
 ---
 
-### **🛠️ Technologies I Use**
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=react,js,tailwind,html,css,c,python,cpp,fastapi,docker,linux,git,raspberrypi,anaconda,vscode,mysql,vim,commandline,numpy,pandas,matplotlib&theme=dark" />
-</p>
-
----
 
 ### **🌟 Key Projects**
 
