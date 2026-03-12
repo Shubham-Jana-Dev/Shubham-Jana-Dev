@@ -10,16 +10,18 @@
 </p>
   ### **🛠️ Technologies I Use**
 
+### **🛠️ Technologies I Use**
+
 <p align="left">
   <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind&theme=dark" alt="Frontend" />
 </p>
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,cpp,c,fastapi,mysql,anaconda,numpy,pandas,matplotlib&theme=dark" alt="Backend and Data" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,c,fastapi,mysql,numpy,pandas,matplotlib&theme=dark" alt="Backend and Data" />
 </p>
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=git,docker,linux,raspberrypi,vscode,vim,bash&theme=dark" alt="Tools" />
+  <img src="https://skillicons.dev/icons?i=git,githubactions,docker,linux,raspberrypi,vscode,vim,bash,tmux,md,anconda&theme=dark" alt="Tools" />
 </p>
 </p>
 
