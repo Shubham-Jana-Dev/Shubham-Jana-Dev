@@ -21,7 +21,7 @@
 </p>
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=git,githubactions,docker,linux,raspberrypi,vscode,vim,bash,tmux,md,anconda&theme=dark" alt="Tools" />
+  <img src="https://skillicons.dev/icons?i=git,githubactions,docker,linux,raspberrypi,vscode,vim,bash,md,anaconda,tmux&theme=dark" alt="Tools" />
 </p>
 </p>
 
