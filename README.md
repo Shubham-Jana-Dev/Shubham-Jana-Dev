@@ -8,7 +8,19 @@
   <img src="./profile-stats.svg?v=1" width="100%" alt="Shubham's Dashboard" />
 </p>
 </p>
-  <img src="https://raw.githubusercontent.com/Shubham-Jana-Dev/Shubham-Jana-Dev/output/github-contribution-grid-snake.svg?v=1" alt="Snake animation" height="180" />
+  ### **🛠️ Technologies I Use**
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind&theme=dark" alt="Frontend" />
+</p>
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,cpp,c,fastapi,mysql,anaconda,numpy,pandas,matplotlib&theme=dark" alt="Backend and Data" />
+</p>
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=git,docker,linux,raspberrypi,vscode,vim,bash&theme=dark" alt="Tools" />
+</p>
 </p>
 
 
