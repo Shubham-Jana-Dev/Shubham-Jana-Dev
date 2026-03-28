@@ -17,18 +17,18 @@
     <g transform="translate(50, 50)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="2" fill="none" opacity="0.3"/>
       <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-      <text x="60" y="72" text-anchor="middle" class="streak-val">144</text>
+      <text x="60" y="72" text-anchor="middle" class="streak-val">145</text>
       <text x="60" y="135" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 5 - Mar 28</text>
+      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 4 - Mar 28</text>
     </g>
 
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="32" class="stat">Total Contributions: 1154</text>
-      <text x="0" y="54" class="stat">Total Commits: 1034</text>
+      <text x="0" y="32" class="stat">Total Contributions: 1163</text>
+      <text x="0" y="54" class="stat">Total Commits: 1040</text>
       <text x="0" y="76" class="stat">Stars Collected: 107 ★</text>
-      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 144 Days</text>
-      <text x="0" y="125" class="date-sub">Nov 5 - Present</text>
+      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 145 Days</text>
+      <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
     </g>
 
     <g transform="translate(435, 55)">
@@ -43,8 +43,8 @@
       
           <text x="0" y="30" class="stat">HTML</text>
           <rect x="85" y="21" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="21" width="56.99999999999999" height="6" rx="3" fill="#e34c26"/>
-          <text x="190" y="30" class="percent">57.0%</text>
+          <rect x="85" y="21" width="56.8" height="6" rx="3" fill="#e34c26"/>
+          <text x="190" y="30" class="percent">56.8%</text>
         
           <text x="0" y="52" class="stat">Python</text>
           <rect x="85" y="43" width="100" height="6" rx="3" fill="#444b6a"/>
@@ -58,8 +58,8 @@
         
           <text x="0" y="96" class="stat">CSS</text>
           <rect x="85" y="87" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="87" width="4.5" height="6" rx="3" fill="#563d7c"/>
-          <text x="190" y="96" class="percent">4.5%</text>
+          <rect x="85" y="87" width="4.7" height="6" rx="3" fill="#563d7c"/>
+          <text x="190" y="96" class="percent">4.7%</text>
         
           <text x="0" y="118" class="stat">C++</text>
           <rect x="85" y="109" width="100" height="6" rx="3" fill="#444b6a"/>
@@ -75,8 +75,8 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,339.5652173913044 L64,331.7391304347826 L88,344.7826086956522 L112,336.95652173913044 L136,342.17391304347825 L160,321.30434782608694 L184,331.7391304347826 L208,344.7826086956522 L232,342.17391304347825 L256,331.7391304347826 L280,329.1304347826087 L304,326.52173913043475 L328,290 L352,300.4347826086956 L376,295.2173913043478 L400,297.82608695652175 L424,331.7391304347826 L448,303.04347826086956 L472,323.9130434782609 L496,303.04347826086956 L520,334.3478260869565 L544,326.52173913043475 L568,334.3478260869565 L592,305.6521739130435 L616,318.69565217391306 L640,326.52173913043475 L664,326.52173913043475 L688,321.30434782608694 L712,342.17391304347825 L736,310.8695652173913 L760,350 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,339.5652173913044 L64,331.7391304347826 L88,344.7826086956522 L112,336.95652173913044 L136,342.17391304347825 L160,321.30434782608694 L184,331.7391304347826 L208,344.7826086956522 L232,342.17391304347825 L256,331.7391304347826 L280,329.1304347826087 L304,326.52173913043475 L328,290 L352,300.4347826086956 L376,295.2173913043478 L400,297.82608695652175 L424,331.7391304347826 L448,303.04347826086956 L472,323.9130434782609 L496,303.04347826086956 L520,334.3478260869565 L544,326.52173913043475 L568,334.3478260869565 L592,305.6521739130435 L616,318.69565217391306 L640,326.52173913043475 L664,326.52173913043475 L688,321.30434782608694 L712,342.17391304347825 L736,310.8695652173913 L760,350" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40,339.5652173913044 L64,331.7391304347826 L88,344.7826086956522 L112,336.95652173913044 L136,342.17391304347825 L160,321.30434782608694 L184,331.7391304347826 L208,344.7826086956522 L232,342.17391304347825 L256,331.7391304347826 L280,329.1304347826087 L304,326.52173913043475 L328,290 L352,300.4347826086956 L376,295.2173913043478 L400,297.82608695652175 L424,331.7391304347826 L448,303.04347826086956 L472,323.9130434782609 L496,303.04347826086956 L520,334.3478260869565 L544,326.52173913043475 L568,334.3478260869565 L592,305.6521739130435 L616,318.69565217391306 L640,326.52173913043475 L664,326.52173913043475 L688,321.30434782608694 L712,342.17391304347825 L736,310.8695652173913 L760,326.52173913043475 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,339.5652173913044 L64,331.7391304347826 L88,344.7826086956522 L112,336.95652173913044 L136,342.17391304347825 L160,321.30434782608694 L184,331.7391304347826 L208,344.7826086956522 L232,342.17391304347825 L256,331.7391304347826 L280,329.1304347826087 L304,326.52173913043475 L328,290 L352,300.4347826086956 L376,295.2173913043478 L400,297.82608695652175 L424,331.7391304347826 L448,303.04347826086956 L472,323.9130434782609 L496,303.04347826086956 L520,334.3478260869565 L544,326.52173913043475 L568,334.3478260869565 L592,305.6521739130435 L616,318.69565217391306 L640,326.52173913043475 L664,326.52173913043475 L688,321.30434782608694 L712,342.17391304347825 L736,310.8695652173913 L760,326.52173913043475" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="40" y="375" class="date-sub" text-anchor="middle">26</text><text x="160" y="375" class="date-sub" text-anchor="middle">03</text><text x="280" y="375" class="date-sub" text-anchor="middle">08</text><text x="400" y="375" class="date-sub" text-anchor="middle">13</text><text x="520" y="375" class="date-sub" text-anchor="middle">18</text><text x="640" y="375" class="date-sub" text-anchor="middle">23</text><text x="760" y="375" class="date-sub" text-anchor="middle">28</text>
     </g>
 
