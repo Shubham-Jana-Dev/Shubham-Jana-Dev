@@ -17,17 +17,17 @@
     <g transform="translate(50, 50)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="2" fill="none" opacity="0.3"/>
       <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-      <text x="60" y="72" text-anchor="middle" class="streak-val">145</text>
+      <text x="60" y="72" text-anchor="middle" class="streak-val">146</text>
       <text x="60" y="135" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 4 - Mar 28</text>
+      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 4 - Mar 29</text>
     </g>
 
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="32" class="stat">Total Contributions: 1163</text>
-      <text x="0" y="54" class="stat">Total Commits: 1040</text>
+      <text x="0" y="32" class="stat">Total Contributions: 1169</text>
+      <text x="0" y="54" class="stat">Total Commits: 1044</text>
       <text x="0" y="76" class="stat">Stars Collected: 107 ★</text>
-      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 145 Days</text>
+      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 146 Days</text>
       <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
     </g>
 
@@ -48,8 +48,8 @@
         
           <text x="0" y="52" class="stat">Python</text>
           <rect x="85" y="43" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="43" width="20.6" height="6" rx="3" fill="#3572A5"/>
-          <text x="190" y="52" class="percent">20.6%</text>
+          <rect x="85" y="43" width="20.5" height="6" rx="3" fill="#3572A5"/>
+          <text x="190" y="52" class="percent">20.5%</text>
         
           <text x="0" y="74" class="stat">JavaScript</text>
           <rect x="85" y="65" width="100" height="6" rx="3" fill="#444b6a"/>
@@ -58,8 +58,8 @@
         
           <text x="0" y="96" class="stat">CSS</text>
           <rect x="85" y="87" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="87" width="4.7" height="6" rx="3" fill="#563d7c"/>
-          <text x="190" y="96" class="percent">4.7%</text>
+          <rect x="85" y="87" width="4.8" height="6" rx="3" fill="#563d7c"/>
+          <text x="190" y="96" class="percent">4.8%</text>
         
           <text x="0" y="118" class="stat">C++</text>
           <rect x="85" y="109" width="100" height="6" rx="3" fill="#444b6a"/>
@@ -75,9 +75,9 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,339.5652173913044 L64,331.7391304347826 L88,344.7826086956522 L112,336.95652173913044 L136,342.17391304347825 L160,321.30434782608694 L184,331.7391304347826 L208,344.7826086956522 L232,342.17391304347825 L256,331.7391304347826 L280,329.1304347826087 L304,326.52173913043475 L328,290 L352,300.4347826086956 L376,295.2173913043478 L400,297.82608695652175 L424,331.7391304347826 L448,303.04347826086956 L472,323.9130434782609 L496,303.04347826086956 L520,334.3478260869565 L544,326.52173913043475 L568,334.3478260869565 L592,305.6521739130435 L616,318.69565217391306 L640,326.52173913043475 L664,326.52173913043475 L688,321.30434782608694 L712,342.17391304347825 L736,310.8695652173913 L760,326.52173913043475 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,339.5652173913044 L64,331.7391304347826 L88,344.7826086956522 L112,336.95652173913044 L136,342.17391304347825 L160,321.30434782608694 L184,331.7391304347826 L208,344.7826086956522 L232,342.17391304347825 L256,331.7391304347826 L280,329.1304347826087 L304,326.52173913043475 L328,290 L352,300.4347826086956 L376,295.2173913043478 L400,297.82608695652175 L424,331.7391304347826 L448,303.04347826086956 L472,323.9130434782609 L496,303.04347826086956 L520,334.3478260869565 L544,326.52173913043475 L568,334.3478260869565 L592,305.6521739130435 L616,318.69565217391306 L640,326.52173913043475 L664,326.52173913043475 L688,321.30434782608694 L712,342.17391304347825 L736,310.8695652173913 L760,326.52173913043475" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="40" y="375" class="date-sub" text-anchor="middle">26</text><text x="160" y="375" class="date-sub" text-anchor="middle">03</text><text x="280" y="375" class="date-sub" text-anchor="middle">08</text><text x="400" y="375" class="date-sub" text-anchor="middle">13</text><text x="520" y="375" class="date-sub" text-anchor="middle">18</text><text x="640" y="375" class="date-sub" text-anchor="middle">23</text><text x="760" y="375" class="date-sub" text-anchor="middle">28</text>
+      <path d="M40,331.7391304347826 L64,344.7826086956522 L88,336.95652173913044 L112,342.17391304347825 L136,321.30434782608694 L160,331.7391304347826 L184,344.7826086956522 L208,342.17391304347825 L232,331.7391304347826 L256,329.1304347826087 L280,326.52173913043475 L304,290 L328,300.4347826086956 L352,295.2173913043478 L376,297.82608695652175 L400,331.7391304347826 L424,303.04347826086956 L448,323.9130434782609 L472,303.04347826086956 L496,334.3478260869565 L520,326.52173913043475 L544,334.3478260869565 L568,305.6521739130435 L592,318.69565217391306 L616,326.52173913043475 L640,326.52173913043475 L664,321.30434782608694 L688,342.17391304347825 L712,310.8695652173913 L736,326.52173913043475 L760,334.3478260869565 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,331.7391304347826 L64,344.7826086956522 L88,336.95652173913044 L112,342.17391304347825 L136,321.30434782608694 L160,331.7391304347826 L184,344.7826086956522 L208,342.17391304347825 L232,331.7391304347826 L256,329.1304347826087 L280,326.52173913043475 L304,290 L328,300.4347826086956 L352,295.2173913043478 L376,297.82608695652175 L400,331.7391304347826 L424,303.04347826086956 L448,323.9130434782609 L472,303.04347826086956 L496,334.3478260869565 L520,326.52173913043475 L544,334.3478260869565 L568,305.6521739130435 L592,318.69565217391306 L616,326.52173913043475 L640,326.52173913043475 L664,321.30434782608694 L688,342.17391304347825 L712,310.8695652173913 L736,326.52173913043475 L760,334.3478260869565" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="375" class="date-sub" text-anchor="middle">27</text><text x="160" y="375" class="date-sub" text-anchor="middle">04</text><text x="280" y="375" class="date-sub" text-anchor="middle">09</text><text x="400" y="375" class="date-sub" text-anchor="middle">14</text><text x="520" y="375" class="date-sub" text-anchor="middle">19</text><text x="640" y="375" class="date-sub" text-anchor="middle">24</text><text x="760" y="375" class="date-sub" text-anchor="middle">29</text>
     </g>
 
     <text x="400" y="405" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="#4fd6be" letter-spacing="2" opacity="0.6">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
