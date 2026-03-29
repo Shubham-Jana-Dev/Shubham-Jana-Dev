@@ -24,8 +24,8 @@
 
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="32" class="stat">Total Contributions: 1193</text>
-      <text x="0" y="54" class="stat">Total Commits: 1060</text>
+      <text x="0" y="32" class="stat">Total Contributions: 1199</text>
+      <text x="0" y="54" class="stat">Total Commits: 1064</text>
       <text x="0" y="76" class="stat">Stars Collected: 109 ★</text>
       <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 146 Days</text>
       <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
@@ -75,8 +75,8 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,336 L64,346 L88,340 L112,344 L136,328 L160,336 L184,346 L208,344 L232,336 L256,334 L280,332 L304,304 L328,312 L352,308 L376,310 L400,336 L424,314 L448,330 L472,314 L496,338 L520,332 L544,338 L568,316 L592,326 L616,332 L640,332 L664,328 L688,344 L712,320 L736,332 L760,290 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,336 L64,346 L88,340 L112,344 L136,328 L160,336 L184,346 L208,344 L232,336 L256,334 L280,332 L304,304 L328,312 L352,308 L376,310 L400,336 L424,314 L448,330 L472,314 L496,338 L520,332 L544,338 L568,316 L592,326 L616,332 L640,332 L664,328 L688,344 L712,320 L736,332 L760,290" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40,338.3333333333333 L64,346.6666666666667 L88,341.6666666666667 L112,345 L136,331.6666666666667 L160,338.3333333333333 L184,346.6666666666667 L208,345 L232,338.3333333333333 L256,336.6666666666667 L280,335 L304,311.6666666666667 L328,318.3333333333333 L352,315 L376,316.6666666666667 L400,338.3333333333333 L424,320 L448,333.3333333333333 L472,320 L496,340 L520,335 L544,340 L568,321.6666666666667 L592,330 L616,335 L640,335 L664,331.6666666666667 L688,345 L712,325 L736,335 L760,290 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,338.3333333333333 L64,346.6666666666667 L88,341.6666666666667 L112,345 L136,331.6666666666667 L160,338.3333333333333 L184,346.6666666666667 L208,345 L232,338.3333333333333 L256,336.6666666666667 L280,335 L304,311.6666666666667 L328,318.3333333333333 L352,315 L376,316.6666666666667 L400,338.3333333333333 L424,320 L448,333.3333333333333 L472,320 L496,340 L520,335 L544,340 L568,321.6666666666667 L592,330 L616,335 L640,335 L664,331.6666666666667 L688,345 L712,325 L736,335 L760,290" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="40" y="375" class="date-sub" text-anchor="middle">27</text><text x="160" y="375" class="date-sub" text-anchor="middle">04</text><text x="280" y="375" class="date-sub" text-anchor="middle">09</text><text x="400" y="375" class="date-sub" text-anchor="middle">14</text><text x="520" y="375" class="date-sub" text-anchor="middle">19</text><text x="640" y="375" class="date-sub" text-anchor="middle">24</text><text x="760" y="375" class="date-sub" text-anchor="middle">29</text>
     </g>
 
