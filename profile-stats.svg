@@ -19,7 +19,7 @@
       <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 60 60)"/>
       <text x="60" y="72" text-anchor="middle" class="streak-val">156</text>
       <text x="60" y="135" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 4 - Apr 8</text>
+      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 5 - Apr 9</text>
     </g>
 
     <g transform="translate(230, 55)">
@@ -28,7 +28,7 @@
       <text x="0" y="54" class="stat">Total Commits: 1173</text>
       <text x="0" y="76" class="stat">Stars Collected: 117 ★</text>
       <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 156 Days</text>
-      <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
+      <text x="0" y="125" class="date-sub">Nov 5 - Present</text>
     </g>
 
     <g transform="translate(435, 55)">
@@ -75,9 +75,9 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,338 L64,319.3333333333333 L88,324.6666666666667 L112,322 L136,323.3333333333333 L160,340.6666666666667 L184,326 L208,336.6666666666667 L232,326 L256,342 L280,338 L304,342 L328,327.3333333333333 L352,334 L376,338 L400,338 L424,335.3333333333333 L448,346 L472,330 L496,338 L520,290 L544,326 L568,330 L592,326 L616,335.3333333333333 L640,330 L664,316.6666666666667 L688,340.6666666666667 L712,338 L736,347.3333333333333 L760,312.6666666666667 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,338 L64,319.3333333333333 L88,324.6666666666667 L112,322 L136,323.3333333333333 L160,340.6666666666667 L184,326 L208,336.6666666666667 L232,326 L256,342 L280,338 L304,342 L328,327.3333333333333 L352,334 L376,338 L400,338 L424,335.3333333333333 L448,346 L472,330 L496,338 L520,290 L544,326 L568,330 L592,326 L616,335.3333333333333 L640,330 L664,316.6666666666667 L688,340.6666666666667 L712,338 L736,347.3333333333333 L760,312.6666666666667" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="40" y="375" class="date-sub" text-anchor="middle">09</text><text x="160" y="375" class="date-sub" text-anchor="middle">14</text><text x="280" y="375" class="date-sub" text-anchor="middle">19</text><text x="400" y="375" class="date-sub" text-anchor="middle">24</text><text x="520" y="375" class="date-sub" text-anchor="middle">29</text><text x="640" y="375" class="date-sub" text-anchor="middle">03</text><text x="760" y="375" class="date-sub" text-anchor="middle">08</text>
+      <path d="M40,319.3333333333333 L64,324.6666666666667 L88,322 L112,323.3333333333333 L136,340.6666666666667 L160,326 L184,336.6666666666667 L208,326 L232,342 L256,338 L280,342 L304,327.3333333333333 L328,334 L352,338 L376,338 L400,335.3333333333333 L424,346 L448,330 L472,338 L496,290 L520,326 L544,330 L568,326 L592,335.3333333333333 L616,330 L640,316.6666666666667 L664,340.6666666666667 L688,338 L712,347.3333333333333 L736,312.6666666666667 L760,350 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,319.3333333333333 L64,324.6666666666667 L88,322 L112,323.3333333333333 L136,340.6666666666667 L160,326 L184,336.6666666666667 L208,326 L232,342 L256,338 L280,342 L304,327.3333333333333 L328,334 L352,338 L376,338 L400,335.3333333333333 L424,346 L448,330 L472,338 L496,290 L520,326 L544,330 L568,326 L592,335.3333333333333 L616,330 L640,316.6666666666667 L664,340.6666666666667 L688,338 L712,347.3333333333333 L736,312.6666666666667 L760,350" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="375" class="date-sub" text-anchor="middle">10</text><text x="160" y="375" class="date-sub" text-anchor="middle">15</text><text x="280" y="375" class="date-sub" text-anchor="middle">20</text><text x="400" y="375" class="date-sub" text-anchor="middle">25</text><text x="520" y="375" class="date-sub" text-anchor="middle">30</text><text x="640" y="375" class="date-sub" text-anchor="middle">04</text><text x="760" y="375" class="date-sub" text-anchor="middle">09</text>
     </g>
 
     <text x="400" y="405" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="#4fd6be" letter-spacing="2" opacity="0.6">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
