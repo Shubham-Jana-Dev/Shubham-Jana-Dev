@@ -17,18 +17,18 @@
     <g transform="translate(50, 50)">
       <circle cx="60" cy="60" r="55" stroke="#444b6a" stroke-width="2" fill="none" opacity="0.3"/>
       <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-      <text x="60" y="72" text-anchor="middle" class="streak-val">188</text>
+      <text x="60" y="72" text-anchor="middle" class="streak-val">189</text>
       <text x="60" y="135" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 5 - May 11</text>
+      <text x="60" y="152" text-anchor="middle" class="date-sub">Nov 4 - May 11</text>
     </g>
 
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="32" class="stat">Total Contributions: 1602</text>
-      <text x="0" y="54" class="stat">Total Commits: 1348</text>
+      <text x="0" y="32" class="stat">Total Contributions: 1605</text>
+      <text x="0" y="54" class="stat">Total Commits: 1350</text>
       <text x="0" y="76" class="stat">Stars Collected: 118 ★</text>
-      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 188 Days</text>
-      <text x="0" y="125" class="date-sub">Nov 5 - Present</text>
+      <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 189 Days</text>
+      <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
     </g>
 
     <g transform="translate(435, 55)">
@@ -69,14 +69,14 @@
           <text x="0" y="140" class="stat">C</text>
           <rect x="85" y="131" width="100" height="6" rx="3" fill="#444b6a"/>
           <rect x="85" y="131" width="2" height="6" rx="3" fill="#555555"/>
-          <text x="190" y="140" class="percent">0.6%</text>
+          <text x="190" y="140" class="percent">0.7%</text>
         
     </g>
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,292.4 L64,328.4 L88,328.4 L112,340.4 L136,321.2 L160,330.8 L184,309.2 L208,290 L232,330.8 L256,335.6 L280,335.6 L304,333.2 L328,340.4 L352,335.6 L376,311.6 L400,342.8 L424,328.4 L448,328.4 L472,342.8 L496,338 L520,342.8 L544,335.6 L568,314 L592,342.8 L616,342.8 L640,335.6 L664,342.8 L688,342.8 L712,342.8 L736,340.4 L760,350 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,292.4 L64,328.4 L88,328.4 L112,340.4 L136,321.2 L160,330.8 L184,309.2 L208,290 L232,330.8 L256,335.6 L280,335.6 L304,333.2 L328,340.4 L352,335.6 L376,311.6 L400,342.8 L424,328.4 L448,328.4 L472,342.8 L496,338 L520,342.8 L544,335.6 L568,314 L592,342.8 L616,342.8 L640,335.6 L664,342.8 L688,342.8 L712,342.8 L736,340.4 L760,350" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40,292.4 L64,328.4 L88,328.4 L112,340.4 L136,321.2 L160,330.8 L184,309.2 L208,290 L232,330.8 L256,335.6 L280,335.6 L304,333.2 L328,340.4 L352,335.6 L376,311.6 L400,342.8 L424,328.4 L448,328.4 L472,342.8 L496,338 L520,342.8 L544,335.6 L568,314 L592,342.8 L616,342.8 L640,335.6 L664,342.8 L688,342.8 L712,342.8 L736,340.4 L760,342.8 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,292.4 L64,328.4 L88,328.4 L112,340.4 L136,321.2 L160,330.8 L184,309.2 L208,290 L232,330.8 L256,335.6 L280,335.6 L304,333.2 L328,340.4 L352,335.6 L376,311.6 L400,342.8 L424,328.4 L448,328.4 L472,342.8 L496,338 L520,342.8 L544,335.6 L568,314 L592,342.8 L616,342.8 L640,335.6 L664,342.8 L688,342.8 L712,342.8 L736,340.4 L760,342.8" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="40" y="375" class="date-sub" text-anchor="middle">11</text><text x="160" y="375" class="date-sub" text-anchor="middle">16</text><text x="280" y="375" class="date-sub" text-anchor="middle">21</text><text x="400" y="375" class="date-sub" text-anchor="middle">26</text><text x="520" y="375" class="date-sub" text-anchor="middle">01</text><text x="640" y="375" class="date-sub" text-anchor="middle">06</text><text x="760" y="375" class="date-sub" text-anchor="middle">11</text>
     </g>
 
