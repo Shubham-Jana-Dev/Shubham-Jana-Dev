@@ -24,8 +24,8 @@
 
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="32" class="stat">Total Contributions: 1636</text>
-      <text x="0" y="54" class="stat">Total Commits: 1370</text>
+      <text x="0" y="32" class="stat">Total Contributions: 1638</text>
+      <text x="0" y="54" class="stat">Total Commits: 1372</text>
       <text x="0" y="76" class="stat">Stars Collected: 118 ★</text>
       <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 199 Days</text>
       <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
@@ -75,8 +75,8 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,327.5 L64,323.75 L88,335 L112,327.5 L136,290 L160,338.75 L184,316.25 L208,316.25 L232,338.75 L256,331.25 L280,338.75 L304,327.5 L328,293.75 L352,338.75 L376,338.75 L400,327.5 L424,338.75 L448,338.75 L472,338.75 L496,335 L520,338.75 L544,338.75 L568,327.5 L592,338.75 L616,338.75 L640,338.75 L664,338.75 L688,338.75 L712,338.75 L736,338.75 L760,346.25 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,327.5 L64,323.75 L88,335 L112,327.5 L136,290 L160,338.75 L184,316.25 L208,316.25 L232,338.75 L256,331.25 L280,338.75 L304,327.5 L328,293.75 L352,338.75 L376,338.75 L400,327.5 L424,338.75 L448,338.75 L472,338.75 L496,335 L520,338.75 L544,338.75 L568,327.5 L592,338.75 L616,338.75 L640,338.75 L664,338.75 L688,338.75 L712,338.75 L736,338.75 L760,346.25" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40,327.5 L64,323.75 L88,335 L112,327.5 L136,290 L160,338.75 L184,316.25 L208,316.25 L232,338.75 L256,331.25 L280,338.75 L304,327.5 L328,293.75 L352,338.75 L376,338.75 L400,327.5 L424,338.75 L448,338.75 L472,338.75 L496,335 L520,338.75 L544,338.75 L568,327.5 L592,338.75 L616,338.75 L640,338.75 L664,338.75 L688,338.75 L712,338.75 L736,338.75 L760,338.75 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,327.5 L64,323.75 L88,335 L112,327.5 L136,290 L160,338.75 L184,316.25 L208,316.25 L232,338.75 L256,331.25 L280,338.75 L304,327.5 L328,293.75 L352,338.75 L376,338.75 L400,327.5 L424,338.75 L448,338.75 L472,338.75 L496,335 L520,338.75 L544,338.75 L568,327.5 L592,338.75 L616,338.75 L640,338.75 L664,338.75 L688,338.75 L712,338.75 L736,338.75 L760,338.75" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="40" y="375" class="date-sub" text-anchor="middle">21</text><text x="160" y="375" class="date-sub" text-anchor="middle">26</text><text x="280" y="375" class="date-sub" text-anchor="middle">01</text><text x="400" y="375" class="date-sub" text-anchor="middle">06</text><text x="520" y="375" class="date-sub" text-anchor="middle">11</text><text x="640" y="375" class="date-sub" text-anchor="middle">16</text><text x="760" y="375" class="date-sub" text-anchor="middle">21</text>
     </g>
 
