@@ -25,7 +25,7 @@
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
       <text x="0" y="32" class="stat">Total Contributions: 1736</text>
-      <text x="0" y="54" class="stat">Total Commits: 1422</text>
+      <text x="0" y="54" class="stat">Total Commits: 1444</text>
       <text x="0" y="76" class="stat">Stars Collected: 118 ★</text>
       <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 217 Days</text>
       <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
@@ -43,8 +43,8 @@
       
           <text x="0" y="30" class="stat">HTML</text>
           <rect x="85" y="21" width="100" height="6" rx="3" fill="#444b6a"/>
-          <rect x="85" y="21" width="50.4" height="6" rx="3" fill="#e34c26"/>
-          <text x="190" y="30" class="percent">50.4%</text>
+          <rect x="85" y="21" width="50.3" height="6" rx="3" fill="#e34c26"/>
+          <text x="190" y="30" class="percent">50.3%</text>
         
           <text x="0" y="52" class="stat">JavaScript</text>
           <rect x="85" y="43" width="100" height="6" rx="3" fill="#444b6a"/>
@@ -64,7 +64,7 @@
           <text x="0" y="118" class="stat">C++</text>
           <rect x="85" y="109" width="100" height="6" rx="3" fill="#444b6a"/>
           <rect x="85" y="109" width="2" height="6" rx="3" fill="#f34b7d"/>
-          <text x="190" y="118" class="percent">1.0%</text>
+          <text x="190" y="118" class="percent">1.1%</text>
         
           <text x="0" y="140" class="stat">C</text>
           <rect x="85" y="131" width="100" height="6" rx="3" fill="#444b6a"/>
