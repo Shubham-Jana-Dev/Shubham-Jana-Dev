@@ -19,6 +19,8 @@
   <img src="https://skillicons.dev/icons?i=python,cpp,c,fastapi,mysql,numpy,pandas,matplotlib&theme=dark" alt="Backend and Data" />
 </p>
 
+[![My Skills](https://skillicons.dev/icons?i=numpy)](https://skillicons.dev)
+
 <p align="left">
   <img src="https://skillicons.dev/icons?i=git,githubactions,docker,linux,raspberrypi,vscode,vim,bash,md,anaconda,tmux&theme=dark" alt="Tools" />
 </p>
