@@ -24,8 +24,8 @@
 
     <g transform="translate(230, 55)">
       <text x="0" y="0" class="title">Activity Impact</text>
-      <text x="0" y="32" class="stat">Total Contributions: 2155</text>
-      <text x="0" y="54" class="stat">Total Commits: 1760</text>
+      <text x="0" y="32" class="stat">Total Contributions: 2159</text>
+      <text x="0" y="54" class="stat">Total Commits: 1764</text>
       <text x="0" y="76" class="stat">Stars Collected: 119 ★</text>
       <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 274 Days</text>
       <text x="0" y="125" class="date-sub">Nov 4 - Present</text>
@@ -75,8 +75,8 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,320 L64,320 L88,335 L112,305 L136,335 L160,335 L184,335 L208,335 L232,335 L256,335 L280,330 L304,330 L328,330 L352,310 L376,295 L400,325 L424,335 L448,325 L472,335 L496,290 L520,320 L544,295 L568,330 L592,330 L616,305 L640,345 L664,335 L688,315 L712,300 L736,340 L760,335 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,320 L64,320 L88,335 L112,305 L136,335 L160,335 L184,335 L208,335 L232,335 L256,335 L280,330 L304,330 L328,330 L352,310 L376,295 L400,325 L424,335 L448,325 L472,335 L496,290 L520,320 L544,295 L568,330 L592,330 L616,305 L640,345 L664,335 L688,315 L712,300 L736,340 L760,335" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40,320 L64,320 L88,335 L112,305 L136,335 L160,335 L184,335 L208,335 L232,335 L256,335 L280,330 L304,330 L328,330 L352,310 L376,295 L400,325 L424,335 L448,325 L472,335 L496,290 L520,320 L544,295 L568,330 L592,330 L616,305 L640,345 L664,335 L688,315 L712,300 L736,340 L760,315 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,320 L64,320 L88,335 L112,305 L136,335 L160,335 L184,335 L208,335 L232,335 L256,335 L280,330 L304,330 L328,330 L352,310 L376,295 L400,325 L424,335 L448,325 L472,335 L496,290 L520,320 L544,295 L568,330 L592,330 L616,305 L640,345 L664,335 L688,315 L712,300 L736,340 L760,315" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="40" y="375" class="date-sub" text-anchor="middle">05</text><text x="160" y="375" class="date-sub" text-anchor="middle">10</text><text x="280" y="375" class="date-sub" text-anchor="middle">15</text><text x="400" y="375" class="date-sub" text-anchor="middle">20</text><text x="520" y="375" class="date-sub" text-anchor="middle">25</text><text x="640" y="375" class="date-sub" text-anchor="middle">30</text><text x="760" y="375" class="date-sub" text-anchor="middle">04</text>
     </g>
 
