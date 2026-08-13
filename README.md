@@ -16,7 +16,7 @@
 </p>
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,cpp,c,fastapi,mysql,numpy,pandas,matplotlib&theme=dark" alt="Backend and Data" />
+  <img src="https://skillicons.dev/icons?i=python,java,cpp,c,fastapi,mysql,numpy,pandas,matplotlib&theme=dark" alt="Backend and Data" />
 </p>
 
 [![My Skills](https://skillicons.dev/icons?i=numpy)](https://skillicons.dev)
