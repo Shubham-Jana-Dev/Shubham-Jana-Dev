@@ -27,18 +27,17 @@
 </p>
 
 ---
-<!-- LeetCode Stats Card -->
+<!-- LeetCode Stats -->
 <a href="https://leetcode.com/u/shubham-jana-dev/">
   <img src="https://leetcode-stats-api.herokuapp.com/shubham-jana-dev" alt="LeetCode Stats" />
 </a>
 
-<!-- LeetCode Activity Calendar -->
+<!-- Reliable LeetCode Card -->
 <a href="https://leetcode.com/u/shubham-jana-dev/">
-  <img src="https://leetcode-readme-stats.vercel.app/api?username=shubham-jana-dev&theme=dark" alt="LeetCode Calendar" />
+  <img src="https://github-readme-leetcode-stats.vercel.app/api?username=shubham-jana-dev&theme=dark" alt="LeetCode Progress" />
 </a>
 
-
-<!-- GeeksforGeeks Stats Card -->
+<!-- GeeksforGeeks Card -->
 <a href="https://www.geeksforgeeks.org/user/devshubhurj1/">
   <img src="https://geeks-for-geeks-stats-api.vercel.app/devshubhurj1" alt="GeeksforGeeks Stats" />
 </a>
