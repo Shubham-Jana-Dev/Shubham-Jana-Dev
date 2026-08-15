@@ -36,6 +36,14 @@
 <a href="https://leetcode.com/u/shubham-jana-dev/">
   <img src="https://leetcode-readme-stats.vercel.app/api?username=shubham-jana-dev&theme=dark" alt="LeetCode Calendar" />
 </a>
+
+
+<!-- GeeksforGeeks Stats Card -->
+<a href="https://www.geeksforgeeks.org/user/devshubhurj1/">
+  <img src="https://geeks-for-geeks-stats-api.vercel.app/devshubhurj1" alt="GeeksforGeeks Stats" />
+</a>
+
+
 ---
 
 ### **👨‍💻 About Me**
