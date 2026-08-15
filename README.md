@@ -26,7 +26,16 @@
 </p>
 </p>
 
+---
+<!-- LeetCode Stats Card -->
+<a href="https://leetcode.com/u/shubham-jana-dev/">
+  <img src="https://leetcode-stats-api.herokuapp.com/shubham-jana-dev" alt="LeetCode Stats" />
+</a>
 
+<!-- LeetCode Activity Calendar -->
+<a href="https://leetcode.com/u/shubham-jana-dev/">
+  <img src="https://leetcode-readme-stats.vercel.app/api?username=shubham-jana-dev&theme=dark" alt="LeetCode Calendar" />
+</a>
 ---
 
 ### **👨‍💻 About Me**
