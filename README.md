@@ -36,12 +36,8 @@
 <a href="https://leetcode.com/u/shubham-jana-dev/">
   <img src="https://github-readme-leetcode-stats.vercel.app/api?username=shubham-jana-dev&theme=dark" alt="LeetCode Progress" />
 </a>
-
-<!-- GeeksforGeeks Card -->
-<a href="https://www.geeksforgeeks.org/user/devshubhurj1/">
-  <img src="https://geeks-for-geeks-stats-api.vercel.app/devshubhurj1" alt="GeeksforGeeks Stats" />
-</a>
-
+<br>
+[![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/devshubhurj1?theme=dark)](https://www.geeksforgeeks.org/profile/devshubhurj1)
 
 ---
 
