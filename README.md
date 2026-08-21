@@ -1,12 +1,13 @@
 # Hi there 👋 I'm Shubham Jana
+
 ---
+
 <p align="center">
-📊 Activity & Impact
+  📊 Activity & Impact
 </p>
 
 <p align="center">
   <img src="./profile-stats.svg?v=1" width="100%" alt="Shubham's Dashboard" />
-</p>
 </p>
 
 ### **🛠️ Technologies I Use**
@@ -19,28 +20,18 @@
   <img src="https://skillicons.dev/icons?i=python,java,cpp,c,fastapi,mysql,numpy,pandas,matplotlib&theme=dark" alt="Backend and Data" />
 </p>
 
-[![My Skills](https://skillicons.dev/icons?i=numpy)](https://skillicons.dev)
-
 <p align="left">
   <img src="https://skillicons.dev/icons?i=git,githubactions,docker,linux,raspberrypi,vscode,vim,bash,md,anaconda,tmux&theme=dark" alt="Tools" />
 </p>
-</p>
 
 ---
-<!-- LeetCode Stats -->
-<a href="https://leetcode.com/u/shubham-jana-dev/">
-  <img src="https://leetcode-stats-api.herokuapp.com/shubham-jana-dev" alt="LeetCode Stats" />
-</a>
 
-<!-- Reliable LeetCode Card -->
-<a href="https://leetcode.com/u/shubham-jana-dev/">
-  <img src="https://github-readme-leetcode-stats.vercel.app/api?username=shubham-jana-dev&theme=dark" alt="LeetCode Progress" />
-</a>
-<br>
-[![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/devshubhurj1?theme=dark)](https://www.geeksforgeeks.org/profile/devshubhurj1)
+<!-- Stats Section -->
+<p align="left">
+  <a href="https://leetcode.com/u/shubham-jana-dev/" target="_blank"><img src="https://leetcard.jacoblin.cool/shubham-jana-dev?theme=dark" alt="LeetCode Stats" /></a>
+  <a href="https://www.geeksforgeeks.org/profile/devshubhurj1" target="_blank"><img src="https://gfgstatscard.vercel.app/devshubhurj1?theme=dark" alt="GeeksforGeeks Stats" /></a>
+</p>
 
-
-<br>
 ---
 
 ### **👨‍💻 About Me**
@@ -52,11 +43,9 @@
 
 ---
 
-
-
 ### **🌟 Key Projects**
 
-* **[KJ Enterprise Portal](https://github.com/Shubham-Jana-Dev/KJ-Enterprise)** 🌐
+* **[KJ Enterprise Portal](https://github.com/Shubham-Jana-Dev/KJ-Enterprise)** 🌐  
   A high-performance business hub for local services (EV Showroom, Gas Seva, Education), built with semantic HTML5 and advanced CSS3 animations.
 * **[ISHU AI Assistant](https://github.com/Shubham-Jana-Dev/Intelligent-Scheduling-Handheld-Utility-ISHU-)** 🤖  
   A portable AI companion with offline voice control and midnight-aware routine scheduling.
@@ -74,6 +63,6 @@
 ### **🌐 Let's Connect**
 
 <p align="left">
-<a href="https://www.linkedin.com/in/shubham-jana-3b650628a/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shubham-jana" height="30" width="40" /></a>
-<a href="mailto:devshubhamjana@gmail.com" target="_blank"><img align="center" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" height="25" /></a>
+  <a href="https://www.linkedin.com/in/shubham-jana-3b650628a/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shubham-jana" height="30" width="40" /></a>
+  <a href="mailto:devshubhamjana@gmail.com" target="_blank"><img align="center" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" height="25" /></a>
 </p>
