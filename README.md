@@ -27,7 +27,7 @@
 ---
 
 <!-- Stats Section -->
-<p align="left">
+<p align="centre">
   <a href="https://leetcode.com/u/shubham-jana-dev/" target="_blank"><img src="https://leetcard.jacoblin.cool/shubham-jana-dev?theme=dark" alt="LeetCode Stats" /></a>
   <a href="https://www.geeksforgeeks.org/profile/devshubhurj1" target="_blank"><img src="https://gfgstatscard.vercel.app/devshubhurj1?theme=dark" alt="GeeksforGeeks Stats" /></a>
 </p>
