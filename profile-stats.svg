@@ -19,7 +19,7 @@
       <circle cx="60" cy="60" r="55" stroke="#7aa2f7" stroke-width="5" fill="none" stroke-dasharray="345" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 60 60)"/>
       <text x="60" y="72" text-anchor="middle" class="streak-val">30</text>
       <text x="60" y="135" text-anchor="middle" class="label">CURRENT STREAK</text>
-      <text x="60" y="152" text-anchor="middle" class="date-sub">Sep 9 - Oct 8</text>
+      <text x="60" y="152" text-anchor="middle" class="date-sub">Sep 10 - Oct 9</text>
     </g>
 
     <g transform="translate(230, 55)">
@@ -28,7 +28,7 @@
       <text x="0" y="54" class="stat">Total Commits: 2156</text>
       <text x="0" y="76" class="stat">Stars Collected: 114 ★</text>
       <text x="0" y="110" class="label" style="fill:#bb9af7">Longest Streak: 30 Days</text>
-      <text x="0" y="125" class="date-sub">Sep 9 - Present</text>
+      <text x="0" y="125" class="date-sub">Sep 10 - Present</text>
     </g>
 
     <g transform="translate(435, 55)">
@@ -75,9 +75,9 @@
 
     <g transform="translate(0, 20)">
       <text x="40" y="245" class="label" style="fill:#9ece6a">30-DAY MOMENTUM PULSE</text>
-      <path d="M40,350 L64,327.5 L88,331.25 L112,346.25 L136,342.5 L160,301.25 L184,338.75 L208,327.5 L232,338.75 L256,346.25 L280,342.5 L304,338.75 L328,346.25 L352,331.25 L376,316.25 L400,290 L424,335 L448,346.25 L472,346.25 L496,346.25 L520,346.25 L544,346.25 L568,346.25 L592,338.75 L616,327.5 L640,338.75 L664,342.5 L688,346.25 L712,338.75 L736,346.25 L760,346.25 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
-      <path d="M40,350 L64,327.5 L88,331.25 L112,346.25 L136,342.5 L160,301.25 L184,338.75 L208,327.5 L232,338.75 L256,346.25 L280,342.5 L304,338.75 L328,346.25 L352,331.25 L376,316.25 L400,290 L424,335 L448,346.25 L472,346.25 L496,346.25 L520,346.25 L544,346.25 L568,346.25 L592,338.75 L616,327.5 L640,338.75 L664,342.5 L688,346.25 L712,338.75 L736,346.25 L760,346.25" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="40" y="375" class="date-sub" text-anchor="middle">08</text><text x="160" y="375" class="date-sub" text-anchor="middle">13</text><text x="280" y="375" class="date-sub" text-anchor="middle">18</text><text x="400" y="375" class="date-sub" text-anchor="middle">23</text><text x="520" y="375" class="date-sub" text-anchor="middle">28</text><text x="640" y="375" class="date-sub" text-anchor="middle">03</text><text x="760" y="375" class="date-sub" text-anchor="middle">08</text>
+      <path d="M40,327.5 L64,331.25 L88,346.25 L112,342.5 L136,301.25 L160,338.75 L184,327.5 L208,338.75 L232,346.25 L256,342.5 L280,338.75 L304,346.25 L328,331.25 L352,316.25 L376,290 L400,335 L424,346.25 L448,346.25 L472,346.25 L496,346.25 L520,346.25 L544,346.25 L568,338.75 L592,327.5 L616,338.75 L640,342.5 L664,346.25 L688,338.75 L712,346.25 L736,346.25 L760,350 L760,350 L40,350 Z" fill="#9ece6a" fill-opacity="0.08" />
+      <path d="M40,327.5 L64,331.25 L88,346.25 L112,342.5 L136,301.25 L160,338.75 L184,327.5 L208,338.75 L232,346.25 L256,342.5 L280,338.75 L304,346.25 L328,331.25 L352,316.25 L376,290 L400,335 L424,346.25 L448,346.25 L472,346.25 L496,346.25 L520,346.25 L544,346.25 L568,338.75 L592,327.5 L616,338.75 L640,342.5 L664,346.25 L688,338.75 L712,346.25 L736,346.25 L760,350" stroke="#9ece6a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="375" class="date-sub" text-anchor="middle">09</text><text x="160" y="375" class="date-sub" text-anchor="middle">14</text><text x="280" y="375" class="date-sub" text-anchor="middle">19</text><text x="400" y="375" class="date-sub" text-anchor="middle">24</text><text x="520" y="375" class="date-sub" text-anchor="middle">29</text><text x="640" y="375" class="date-sub" text-anchor="middle">04</text><text x="760" y="375" class="date-sub" text-anchor="middle">09</text>
     </g>
 
     <text x="400" y="405" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="#4fd6be" letter-spacing="2" opacity="0.6">LOCAL-FIRST | ZERO-SERVER | PRIVACY-FOCUSED</text>
